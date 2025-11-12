@@ -28,6 +28,11 @@ namespace Sistema_tienda_POE
 
                 Application.Run(new frmPrincipalAdministrador());
             }
+
+            if (login.DialogResult == DialogResult.Yes)
+            {
+                Application.Run(new frmPrincipalCajero());
+            }
         }
     }
 }
