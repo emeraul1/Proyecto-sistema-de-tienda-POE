@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_tienda_POE
+namespace Sistema_tienda_POE.Forms
 {
-    public partial class Form1 : Form
+    public partial class frmPrincipalAdministrador : Form
     {
-        public Form1()
+        public frmPrincipalAdministrador()
         {
             InitializeComponent();
         }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RepoDb;
+using Microsoft.Data.SqlClient;
+using Sistema_tienda_POE.Forms;
 
 namespace Sistema_tienda_POE
 {
@@ -14,9 +17,17 @@ namespace Sistema_tienda_POE
         [STAThread]
         static void Main()
         {
+            SqlServerBootstrap.Initialize();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            frmLogin login = new frmLogin();
+
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+
+                Application.Run(new frmPrincipalAdministrador());
+            }
         }
     }
 }
