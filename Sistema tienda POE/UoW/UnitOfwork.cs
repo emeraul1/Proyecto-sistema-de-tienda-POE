@@ -17,6 +17,7 @@ namespace Sistema_tienda_POE.UoW
         private UsuarioRepository _usuarioRepo;
         private RolResopitory _rolRepo;
         private ProductoRepository _productoRepo;
+        private CategoriaRepository _categoriaRepo;
 
         public UnitOfwork(string connectionString)
         {
@@ -61,6 +62,19 @@ namespace Sistema_tienda_POE.UoW
                 return _productoRepo;
             }
         }
+
+        public CategoriaRepository Categoria
+        {
+            get
+            {
+                if (_categoriaRepo == null)
+                {
+                    _categoriaRepo = new CategoriaRepository(_connection, _transaction);
+                }
+                return _categoriaRepo;
+            }
+        }
+
         public void Commit()
         {
             _transaction?.Commit();

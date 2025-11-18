@@ -31,6 +31,7 @@
             this.btnCerarSesion = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbnProductos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,12 +58,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.tbnProductos);
             this.panel1.Controls.Add(this.btnCerarSesion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(924, 539);
             this.panel1.TabIndex = 3;
+            // 
+            // tbnProductos
+            // 
+            this.tbnProductos.Location = new System.Drawing.Point(391, 110);
+            this.tbnProductos.Name = "tbnProductos";
+            this.tbnProductos.Size = new System.Drawing.Size(91, 48);
+            this.tbnProductos.TabIndex = 5;
+            this.tbnProductos.Text = "Productos";
+            this.tbnProductos.UseVisualStyleBackColor = true;
+            this.tbnProductos.Click += new System.EventHandler(this.tbnProductos_Click);
             // 
             // frmPrincipalAdministrador
             // 
@@ -87,5 +99,6 @@
         private System.Windows.Forms.Button btnCerarSesion;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button tbnProductos;
     }
 }

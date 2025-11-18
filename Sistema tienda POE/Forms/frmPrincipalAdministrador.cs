@@ -30,5 +30,11 @@ namespace Sistema_tienda_POE.Forms
         {
             this.Close();
         }
+
+        private void tbnProductos_Click(object sender, EventArgs e)
+        {
+            var frmProductos = new frmProductos();
+            frmProductos.Show();
+        }
     }
 }

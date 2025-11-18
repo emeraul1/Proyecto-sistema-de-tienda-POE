@@ -12,6 +12,7 @@ namespace Sistema_tienda_POE.UoW
         UsuarioRepository Usuario { get; }
         RolResopitory Rol { get; }
         ProductoRepository Producto { get; }
+        CategoriaRepository Categoria { get; }
         void Commit();
     }
 }
