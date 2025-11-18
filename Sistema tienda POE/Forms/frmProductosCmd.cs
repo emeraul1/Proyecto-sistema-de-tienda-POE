@@ -34,7 +34,7 @@ namespace Sistema_tienda_POE.Forms
                
                 using (var uow = new UnitOfwork(_connectionString))
                 {
-                    var listaRoles = ouw.Rol.GetByEstado(true).ToList();
+                    var listaRoles = ouw.Categoria.GetByEstado(true).ToList();
                     cmbCategoria.DataSource = listaRoles;
                     cmbCategoria.DisplayMember = "Nombre";
                     cmbCategoria.ValueMember = "IdCategoria";

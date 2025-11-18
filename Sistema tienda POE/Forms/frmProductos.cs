@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using Sistema_tienda_POE.UoW;
 using Sistema_tienda_POE.Clases;
+using RepoDb;
 
 namespace Sistema_tienda_POE.Forms
 {
@@ -140,6 +141,7 @@ namespace Sistema_tienda_POE.Forms
                 PrecioVenta =  decimal.Parse(txtPrecioVenta.Text.Trim()),
                 IdCategoria = ((Categoria)cmbCategoria.SelectedItem).IdCategoria,
                 Marca = txtMarca.Text.Trim(),
+                StockMinimo = int.Parse(txtStockMinimo.Text.Trim()),
                 Modelo = txtModelo.Text.Trim(),
                 Estado = true
             };
@@ -154,9 +156,30 @@ namespace Sistema_tienda_POE.Forms
             CargarProductos();
         }
 
+        private int productoSeleccionadoId = 0;
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(e.RowIndex >= 0)
+            {
+                var producto = (Producto)dgvProductos.Rows[e.RowIndex].DataBoundItem;
+                productoSeleccionadoId = producto.IdProducto;
+                txtCantidad.Text = producto.Cantidad.ToString();
+                txtCodigo.Text = producto.CodigoBarras;
+                txtCosto.Text = producto.Costo.ToString("F2");
+                txtMarca.Text = producto.Marca; 
+                txtModelo.Text = producto.Modelo;
+                txtNombre.Text = producto.Nombre;
+                txtPrecioVenta.Text = producto.PrecioVenta.ToString("F2");
+                txtStockMinimo.Text = producto.StockMinimo.ToString();
+                if(producto.IdCategoria > 0)
+                {
+                    cmbCategoria.SelectedValue = producto.IdCategoria;
+                }
+                else
+                {
+                    cmbCategoria.SelectedIndex = -1;
+                }
+            }
         }
 
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -243,6 +266,53 @@ namespace Sistema_tienda_POE.Forms
                 {
                     dgvProductos.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
                 }
+            }
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            if (productoSeleccionadoId == 0)
+            {
+                MessageBox.Show("Seleccione un producto para eliminar.");
+                return;
+            }
+            var confirmar = MessageBox.Show("¿Está seguro de que desea eliminar este producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmar != DialogResult.Yes)
+            {
+                LimpiarControles();
+                productoSeleccionadoId  = 0;
+                return;  // El usuario canceló la eliminación
+            }
+                
+
+            var producto = new Producto
+            {
+                IdProducto = productoSeleccionadoId,
+                Estado = false
+            };
+
+            var camposActualizar = new List<Field>
+            {
+                new Field("Estado")
+            };
+
+            using (var uow = new UnitOfwork(_connectionString))
+            {
+                if (camposActualizar.Any())
+                {
+                    uow.Producto.Update(producto, camposActualizar);
+                    uow.Commit();
+                    MessageBox.Show("Producto eliminado correctamente.");
+                    CargarProductos();
+                    LimpiarControles();
+
+                }
+                else
+                {
+                    MessageBox.Show("No hay campos para actualizar.");
+                }
+
             }
         }
     }

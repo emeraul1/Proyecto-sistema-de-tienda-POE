@@ -18,6 +18,9 @@ namespace Sistema_tienda_POE.UoW
         private RolResopitory _rolRepo;
         private ProductoRepository _productoRepo;
         private CategoriaRepository _categoriaRepo;
+        private VentaRepository _ventaRepo;
+        private ClienteRepository _clienteRepo;
+        private MetodoPagoRepository _metodoPagoRepo;
 
         public UnitOfwork(string connectionString)
         {
@@ -72,6 +75,42 @@ namespace Sistema_tienda_POE.UoW
                     _categoriaRepo = new CategoriaRepository(_connection, _transaction);
                 }
                 return _categoriaRepo;
+            }
+        }
+
+        public VentaRepository Venta
+        {
+            get
+            {
+                if (_ventaRepo == null)
+                {
+                    _ventaRepo = new VentaRepository(_connection, _transaction);
+                }
+                return _ventaRepo;
+            }
+        }
+
+        public ClienteRepository Cliente
+        {
+            get
+            {
+                if (_clienteRepo == null)
+                {
+                    _clienteRepo = new ClienteRepository(_connection, _transaction);
+                }
+                return _clienteRepo;
+            }
+        }
+
+        public MetodoPagoRepository MetodoPago
+        {
+            get
+            {
+                if (_metodoPagoRepo == null)
+                {
+                    _metodoPagoRepo = new MetodoPagoRepository(_connection, _transaction);
+                }
+                return _metodoPagoRepo;
             }
         }
 
