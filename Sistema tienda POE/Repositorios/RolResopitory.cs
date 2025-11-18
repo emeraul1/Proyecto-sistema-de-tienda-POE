@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace Sistema_tienda_POE.Repositorios
 {
@@ -20,29 +20,29 @@ namespace Sistema_tienda_POE.Repositorios
             _transaction = transaction;
         }
 
-        public Usuario GetById(int id)
+        public Rol GetById(int id)
         {
-            return _connection.Query<Usuario>(where: e => e.IdUsuario == id, transaction: _transaction).FirstOrDefault();
+            return _connection.Query<Rol>(where: e => e.IdRol == id, transaction: _transaction).FirstOrDefault();
         }
 
-        public int Insert(Usuario rol)
+        public int Insert(Rol rol)
         {
             return (int)_connection.Insert(rol, transaction: _transaction);
         }
 
-        public IEnumerable<Usuario> GetAll()
+        public IEnumerable<Rol> GetAll()
         {
-            return _connection.QueryAll<Usuario>(transaction: _transaction);
+            return _connection.QueryAll<Rol>(transaction: _transaction);
         }
 
-        public int Update(Usuario rol, IEnumerable<Field> campos)
+        public int Update(Rol rol, IEnumerable<Field> campos)
         {
-            return _connection.Update<Usuario>(rol, fields: campos, transaction: _transaction);
+            return _connection.Update<Rol>(rol, fields: campos, transaction: _transaction);
         }
 
-        public IEnumerable<Usuario> GetByEstado(bool estado)
+        public IEnumerable<Rol> GetByEstado(bool estado)
         {
-            return _connection.Query<Usuario>(where: e => e.Estado == estado, transaction: _transaction);
+            return _connection.Query<Rol>(where: e => e.Estado == estado, transaction: _transaction);
         }
 
     }

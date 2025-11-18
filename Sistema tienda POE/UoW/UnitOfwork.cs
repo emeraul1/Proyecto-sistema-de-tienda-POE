@@ -15,6 +15,8 @@ namespace Sistema_tienda_POE.UoW
         private readonly SqlConnection _connection;
         private SqlTransaction _transaction;
         private UsuarioRepository _usuarioRepo;
+        private RolResopitory _rolRepo;
+        private ProductoRepository _productoRepo;
 
         public UnitOfwork(string connectionString)
         {
@@ -32,6 +34,31 @@ namespace Sistema_tienda_POE.UoW
                     _usuarioRepo = new UsuarioRepository(_connection, _transaction);
                 }
                 return _usuarioRepo;
+            }
+        }
+
+        public RolResopitory Rol
+        {
+            get
+            {
+                if (_rolRepo == null)
+                {
+                    _rolRepo = new RolResopitory(_connection, _transaction);
+                }
+                return _rolRepo;
+
+            }
+        }
+
+        public ProductoRepository Producto
+        {
+            get
+            {
+                if (_productoRepo == null)
+                {
+                    _productoRepo = new ProductoRepository(_connection, _transaction);
+                }
+                return _productoRepo;
             }
         }
         public void Commit()

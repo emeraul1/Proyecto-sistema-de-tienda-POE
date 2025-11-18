@@ -12,9 +12,23 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmPrincipalAdministrador : Form
     {
+
         public frmPrincipalAdministrador()
         {
             InitializeComponent();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            var frmUsuarios = new frmUsuarios();
+            
+            frmUsuarios.Show();
+
+        }
+
+        private void btnCerarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

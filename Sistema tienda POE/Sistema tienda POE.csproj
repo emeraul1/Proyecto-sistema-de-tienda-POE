@@ -187,6 +187,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Rol.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Encriptador.cs" />
@@ -208,8 +209,27 @@
     <Compile Include="Forms\frmPrincipalCajero.Designer.cs">
       <DependentUpon>frmPrincipalCajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsuarioCmd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsuarioCmd.Designer.cs">
+      <DependentUpon>frmUsuarioCmd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\ProductoRepository.cs" />
     <Compile Include="Repositorios\RolResopitory.cs" />
     <Compile Include="Repositorios\UsuarioRepository.cs" />
     <Compile Include="UoW\IUnitOfWork.cs" />
@@ -219,6 +239,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPrincipalAdministrador.resx">
       <DependentUpon>frmPrincipalAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsuarioCmd.resx">
+      <DependentUpon>frmUsuarioCmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

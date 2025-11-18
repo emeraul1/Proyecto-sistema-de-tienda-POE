@@ -10,6 +10,8 @@ namespace Sistema_tienda_POE.UoW
     public interface IUnitOfWork : IDisposable
     {
         UsuarioRepository Usuario { get; }
+        RolResopitory Rol { get; }
+        ProductoRepository Producto { get; }
         void Commit();
     }
 }

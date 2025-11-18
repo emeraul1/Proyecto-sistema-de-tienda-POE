@@ -24,7 +24,7 @@ namespace Sistema_tienda_POE
         {
             txtContraseña.UseSystemPasswordChar = true; //activar la mascara en la contrseña 
             txtContraseña.CharacterCasing = CharacterCasing.Lower; //convertir a miniculas
-          //  txtNombreUsuario.CharacterCasing = CharacterCasing.Upper; //convertir a mayusculas
+            txtNombreUsuario.CharacterCasing = CharacterCasing.Upper; //convertir a mayusculas
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace Sistema_tienda_POE
 
                         this.DialogResult = DialogResult.OK;                   
                     }
-                    if (usuario.IdRol == 2)
+                    if (usuario.IdRol == 3)
                     {
                         //usuario encontrado
                         MessageBox.Show($"Bienvenido {usuario.Nombres} {usuario.Apellidos} Rol: Cajero.", "Acceso permitido.",

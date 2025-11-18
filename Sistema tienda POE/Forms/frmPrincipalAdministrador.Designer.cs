@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCerarSesion = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCerarSesion
             // 
-            this.button1.Location = new System.Drawing.Point(658, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCerarSesion.Location = new System.Drawing.Point(761, 493);
+            this.btnCerarSesion.Name = "btnCerarSesion";
+            this.btnCerarSesion.Size = new System.Drawing.Size(122, 23);
+            this.btnCerarSesion.TabIndex = 0;
+            this.btnCerarSesion.Text = "Cerrar sesion";
+            this.btnCerarSesion.UseVisualStyleBackColor = true;
+            this.btnCerarSesion.Click += new System.EventHandler(this.btnCerarSesion_Click);
             // 
             // btnUsuarios
             // 
@@ -50,10 +52,12 @@
             this.btnUsuarios.TabIndex = 1;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.btnCerarSesion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -67,20 +71,20 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(924, 539);
             this.Controls.Add(this.btnUsuarios);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipalAdministrador";
             this.Text = "Menu Principal Administrador";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCerarSesion;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Panel panel1;
     }
