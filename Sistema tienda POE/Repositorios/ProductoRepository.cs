@@ -20,6 +20,11 @@ namespace Sistema_tienda_POE.Repositorios
             _transaction = transaction;
         }
 
+        public Producto GetByCodigoBarras(string codigo)
+        {
+            return _connection.Query<Producto>( where: e => e.CodigoBarras == codigo, transaction: _transaction).FirstOrDefault();
+        }
+
         public Producto GetById(int id)
         {
             return _connection.Query<Producto>(where: e => e.IdProducto == id, transaction: _transaction).FirstOrDefault();

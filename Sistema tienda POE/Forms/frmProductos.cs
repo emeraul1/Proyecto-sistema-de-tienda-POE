@@ -59,6 +59,7 @@ namespace Sistema_tienda_POE.Forms
                 dgvProductos.Columns["IdProducto"].Visible = false;
                 dgvProductos.Columns["Estado"].Visible = false;
                 dgvProductos.Columns["IdCategoria"].Visible = false;
+                dgvProductos.Columns["CantidadVenta"].Visible = false;
                 dgvProductos.Columns["CategoriaNombre"].HeaderText = "Categoria";
                 dgvProductos.Refresh();
 

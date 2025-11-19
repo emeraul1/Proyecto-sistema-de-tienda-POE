@@ -17,5 +17,6 @@ namespace Sistema_tienda_POE.Clases
         public decimal Total { get; set; }
         public bool Estado { get; set; }
         public string Observacion { get; set; }
+        public int IdMetodoPago { get; set; }
     }
 }

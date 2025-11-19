@@ -23,5 +23,7 @@ namespace Sistema_tienda_POE.Clases
 
         public string CategoriaNombre { get; set; }
 
+        public int CantidadVenta { get; set; }
+
     }
 }

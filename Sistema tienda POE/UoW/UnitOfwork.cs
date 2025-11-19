@@ -21,6 +21,7 @@ namespace Sistema_tienda_POE.UoW
         private VentaRepository _ventaRepo;
         private ClienteRepository _clienteRepo;
         private MetodoPagoRepository _metodoPagoRepo;
+        private DetalleVentaRepository _detalleVentaRepo;
 
         public UnitOfwork(string connectionString)
         {
@@ -111,6 +112,18 @@ namespace Sistema_tienda_POE.UoW
                     _metodoPagoRepo = new MetodoPagoRepository(_connection, _transaction);
                 }
                 return _metodoPagoRepo;
+            }
+        }
+
+        public DetalleVentaRepository DetalleVenta
+        {
+            get
+            {
+                if (_detalleVentaRepo == null)
+                {
+                    _detalleVentaRepo = new DetalleVentaRepository(_connection, _transaction);
+                }
+                return _detalleVentaRepo;
             }
         }
 

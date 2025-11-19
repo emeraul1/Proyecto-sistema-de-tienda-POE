@@ -32,6 +32,7 @@
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbnProductos = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.btnVender);
             this.panel1.Controls.Add(this.tbnProductos);
             this.panel1.Controls.Add(this.btnCerarSesion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -68,13 +70,23 @@
             // 
             // tbnProductos
             // 
-            this.tbnProductos.Location = new System.Drawing.Point(391, 110);
+            this.tbnProductos.Location = new System.Drawing.Point(205, 64);
             this.tbnProductos.Name = "tbnProductos";
             this.tbnProductos.Size = new System.Drawing.Size(91, 48);
             this.tbnProductos.TabIndex = 5;
             this.tbnProductos.Text = "Productos";
             this.tbnProductos.UseVisualStyleBackColor = true;
             this.tbnProductos.Click += new System.EventHandler(this.tbnProductos_Click);
+            // 
+            // btnVender
+            // 
+            this.btnVender.Location = new System.Drawing.Point(205, 236);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(91, 48);
+            this.btnVender.TabIndex = 6;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // frmPrincipalAdministrador
             // 
@@ -100,5 +112,6 @@
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button tbnProductos;
+        private System.Windows.Forms.Button btnVender;
     }
 }

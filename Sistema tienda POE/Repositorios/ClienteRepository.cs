@@ -25,6 +25,12 @@ namespace Sistema_tienda_POE.Repositorios
             return _connection.Query<Cliente>(where: e => e.IdCliente == id, transaction: _transaction).FirstOrDefault();
         }
 
+        public Cliente GetByDUI(string DUI)
+        {
+            return _connection.Query<Cliente>(where: e => e.DUI == DUI, transaction: _transaction).FirstOrDefault();
+     
+        }
+
         public int Insert(Cliente cliente)
         {
             return (int)_connection.Insert(cliente, transaction: _transaction);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_tienda_POE.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmPrincipalAdministrador : Form
     {
+        private readonly string _connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MiConexion"].ConnectionString;
 
         public frmPrincipalAdministrador()
         {
@@ -35,6 +37,13 @@ namespace Sistema_tienda_POE.Forms
         {
             var frmProductos = new frmProductos();
             frmProductos.Show();
+        }
+
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            var frm = new frmVenta(_connectionString, GlobalUsuario.UsuarioActual.IdUsuario);
+            frm.Show();
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using Sistema_tienda_POE.Clases;
 
 namespace Sistema_tienda_POE
 {
@@ -35,6 +36,7 @@ namespace Sistema_tienda_POE
             }
 
             //Buscar eb bd
+            
 
             using (var uow = new UoW.UnitOfwork(_connectionString))
             {
@@ -46,7 +48,9 @@ namespace Sistema_tienda_POE
 
                 if (usuario != null)
                 {
-                    if(usuario.IdRol == 1)
+                    GlobalUsuario.UsuarioActual = usuario;
+
+                    if (usuario.IdRol == 1)
                     {
                         //usuario encontrado
                         MessageBox.Show($"Bienvenido {usuario.Nombres} {usuario.Apellidos} Rol: Administrador.", "Acceso permitido.",

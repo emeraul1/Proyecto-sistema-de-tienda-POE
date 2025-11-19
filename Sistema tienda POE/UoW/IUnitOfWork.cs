@@ -16,6 +16,8 @@ namespace Sistema_tienda_POE.UoW
         VentaRepository Venta { get; }
         MetodoPagoRepository MetodoPago { get; }
         ClienteRepository Cliente { get; }
+
+        DetalleVentaRepository DetalleVenta { get; }
         void Commit();
     }
 }
