@@ -379,5 +379,10 @@ namespace Sistema_tienda_POE.Forms
             }
                 
         }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -281,6 +281,9 @@
     <EmbeddedResource Include="Forms\frmPrincipalAdministrador.resx">
       <DependentUpon>frmPrincipalAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrincipalCajero.resx">
+      <DependentUpon>frmPrincipalCajero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
