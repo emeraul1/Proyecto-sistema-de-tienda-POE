@@ -45,5 +45,10 @@ namespace Sistema_tienda_POE.Forms
             var frm = new frmVenta(_connectionString, GlobalUsuario.UsuarioActual.IdUsuario);
             frm.Show();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

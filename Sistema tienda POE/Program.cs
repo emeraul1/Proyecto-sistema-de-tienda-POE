@@ -17,11 +17,13 @@ namespace Sistema_tienda_POE
         [STAThread]
         static void Main()
         {
-            SqlServerBootstrap.Initialize();
+            //SqlServerBootstrap.Initialize();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin login = new frmLogin();
+
+             RepoDb.SqlServerBootstrap.Initialize();    
 
             if (login.ShowDialog() == DialogResult.OK)
             {
