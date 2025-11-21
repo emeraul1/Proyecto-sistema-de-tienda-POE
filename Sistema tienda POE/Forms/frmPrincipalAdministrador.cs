@@ -50,5 +50,13 @@ namespace Sistema_tienda_POE.Forms
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmReporteVentas())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

@@ -41,6 +41,12 @@
     <Reference Include="Azure.Identity, Version=1.14.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Identity.1.14.2\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -193,6 +199,7 @@
     <Compile Include="Clases\GlobalUsuario.cs" />
     <Compile Include="Clases\MetodoPago.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\ReporteVenta.cs" />
     <Compile Include="Clases\Rol.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Venta.cs" />
@@ -239,6 +246,12 @@
     <Compile Include="Forms\frmProductosCmd.Designer.cs">
       <DependentUpon>frmProductosCmd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReporteVentas.Designer.cs">
+      <DependentUpon>frmReporteVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUsuarioCmd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +277,7 @@
     <Compile Include="Repositorios\DetalleVentaRepository.cs" />
     <Compile Include="Repositorios\MetodoPagoRepository.cs" />
     <Compile Include="Repositorios\ProductoRepository.cs" />
+    <Compile Include="Repositorios\ReporteVentaRepository.cs" />
     <Compile Include="Repositorios\RolResopitory.cs" />
     <Compile Include="Repositorios\UsuarioRepository.cs" />
     <Compile Include="Repositorios\VentaRepository.cs" />
@@ -289,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmProductosCmd.resx">
       <DependentUpon>frmProductosCmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReporteVentas.resx">
+      <DependentUpon>frmReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsuarioCmd.resx">
       <DependentUpon>frmUsuarioCmd.cs</DependentUpon>

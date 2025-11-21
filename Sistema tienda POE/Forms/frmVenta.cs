@@ -23,6 +23,8 @@ namespace Sistema_tienda_POE.Forms
             IdUsuario = idUsuario;
             _connectionString = connectionString;
             InitializeComponent();
+
+            cmbMetodoPago.SelectedIndexChanged += cmbMetodoPago_SelectedIndexChanged;
         }
 
         private void frmVenta_Load(object sender, EventArgs e)
@@ -264,10 +266,14 @@ namespace Sistema_tienda_POE.Forms
             if (confirmar != DialogResult.Yes)
                 return;
 
-            Cliente cliente;
+            Cliente cliente = null;
+
             using (var uow = new UnitOfwork(_connectionString))
             {
-                cliente = uow.Cliente.GetByDUI(txtDUI.Text.Trim());
+                if (!string.IsNullOrWhiteSpace(txtDUI.Text.Trim()))
+                {
+                    cliente = uow.Cliente.GetByDUI(txtDUI.Text.Trim());
+                }
             }
 
             decimal total = decimal.Parse(lbTotal.Text.Replace("Total: $", ""));
@@ -275,7 +281,7 @@ namespace Sistema_tienda_POE.Forms
             {
                 var venta = new Venta
                 {
-                    IdCliente = cliente.IdCliente,
+                    IdCliente = cliente?.IdCliente,
                     FechaHora = DateTime.Now,
                     Total = total,
                     Subtotal = total,
@@ -383,6 +389,29 @@ namespace Sistema_tienda_POE.Forms
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cmbMetodoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMetodoPago.SelectedItem == null)
+                return;
+
+            var metodo = cmbMetodoPago.Text.Trim().ToLower();
+
+            if (metodo.Contains("tarjeta"))
+            {
+                decimal total = 0;
+
+                var textoTotal = lbTotal.Text.Replace("Total: $", "").Trim();
+                decimal.TryParse(textoTotal, out total);
+
+                txtDineroCliente.Text = total.ToString("0.00");
+            }
+            else
+            {
+                txtDineroCliente.ReadOnly = false;
+                txtDineroCliente.Clear();
+            }
         }
     }
 }
