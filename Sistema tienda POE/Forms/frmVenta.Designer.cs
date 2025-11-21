@@ -81,6 +81,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnCancelar);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
@@ -207,7 +208,7 @@
             this.btnVender.Location = new System.Drawing.Point(640, 207);
             this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(103, 49);
+            this.btnVender.Size = new System.Drawing.Size(90, 36);
             this.btnVender.TabIndex = 16;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
@@ -228,7 +229,7 @@
             // 
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnQuitar.Location = new System.Drawing.Point(28, 219);
+            this.btnQuitar.Location = new System.Drawing.Point(28, 205);
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(85, 35);
@@ -400,5 +401,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

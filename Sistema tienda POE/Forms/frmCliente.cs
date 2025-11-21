@@ -1,4 +1,4 @@
-﻿using Sistema_tienda_POE.UoW;
+using Sistema_tienda_POE.UoW;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,6 +52,11 @@ namespace Sistema_tienda_POE.Forms
             MessageBox.Show("Cliente agregado exitosamente.");
             this.Close();
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -42,6 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,6 +156,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.label2);
@@ -189,6 +191,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(676, 105);
             this.panel2.TabIndex = 13;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Green;
+            this.btnCancelar.Location = new System.Drawing.Point(69, 230);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(82, 39);
+            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmCliente
             // 
@@ -226,5 +241,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
