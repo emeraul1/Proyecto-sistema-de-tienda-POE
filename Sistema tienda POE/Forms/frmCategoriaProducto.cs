@@ -14,7 +14,7 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmCategoriaProducto : Form
     {
-        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["Miconexion"].ConnectionString;
+        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["conexionbd"].ConnectionString;
         public frmCategoriaProducto()
         {
             InitializeComponent();

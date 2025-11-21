@@ -15,7 +15,7 @@ namespace Sistema_tienda_POE
 {
     public partial class frmLogin : Form
     {
-        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["Miconexion"].ConnectionString;
+        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["conexionbd"].ConnectionString;
         public frmLogin()
         {
             InitializeComponent();

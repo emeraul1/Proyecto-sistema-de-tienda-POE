@@ -1,4 +1,4 @@
-﻿using Sistema_tienda_POE.UoW;
+using Sistema_tienda_POE.UoW;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmCliente : Form
     {
-        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["Miconexion"].ConnectionString;
+        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString;
         public frmCliente(string connectionString)
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace Sistema_tienda_POE.Forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
