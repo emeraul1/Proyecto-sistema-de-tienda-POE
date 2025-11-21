@@ -294,6 +294,9 @@
     <Compile Include="Repositorios\VentaRepository.cs" />
     <Compile Include="UoW\IUnitOfWork.cs" />
     <Compile Include="UoW\UnitOfwork.cs" />
+    <EmbeddedResource Include="Forms\frmBuscarProveedor.resx">
+      <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCategoriaProducto.resx">
       <DependentUpon>frmCategoriaProducto.cs</DependentUpon>
     </EmbeddedResource>
