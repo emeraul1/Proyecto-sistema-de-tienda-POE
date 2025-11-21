@@ -43,8 +43,8 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lbInfo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,14 +57,14 @@
             this.dgvProveedores.AllowUserToDeleteRows = false;
             this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(44, 544);
+            this.dgvProveedores.Location = new System.Drawing.Point(82, 351);
             this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.RowTemplate.Height = 24;
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProveedores.Size = new System.Drawing.Size(1118, 480);
+            this.dgvProveedores.Size = new System.Drawing.Size(896, 266);
             this.dgvProveedores.TabIndex = 0;
             this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             // 
@@ -191,11 +191,22 @@
             // 
             this.panel1.Controls.Add(this.lbInfo);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(44, 134);
+            this.panel1.Location = new System.Drawing.Point(13, 69);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 402);
+            this.panel1.Size = new System.Drawing.Size(1038, 274);
             this.panel1.TabIndex = 13;
+            // 
+            // lbInfo
+            // 
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.Location = new System.Drawing.Point(369, 0);
+            this.lbInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(265, 39);
+            this.lbInfo.TabIndex = 13;
+            this.lbInfo.Text = "Gestion de Proveedores";
             // 
             // panel2
             // 
@@ -215,26 +226,15 @@
             this.panel2.Location = new System.Drawing.Point(69, 62);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(982, 306);
+            this.panel2.Size = new System.Drawing.Size(896, 185);
             this.panel2.TabIndex = 13;
-            // 
-            // lbInfo
-            // 
-            this.lbInfo.AutoSize = true;
-            this.lbInfo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfo.Location = new System.Drawing.Point(369, 0);
-            this.lbInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(265, 39);
-            this.lbInfo.TabIndex = 13;
-            this.lbInfo.Text = "Gestion de Proveedores";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
             this.panel3.Location = new System.Drawing.Point(-24, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1183, 125);
+            this.panel3.Size = new System.Drawing.Size(1090, 60);
             this.panel3.TabIndex = 14;
             // 
             // frmProveedor
@@ -242,10 +242,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1142, 997);
+            this.ClientSize = new System.Drawing.Size(1064, 655);
+            this.Controls.Add(this.dgvProveedores);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvProveedores);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

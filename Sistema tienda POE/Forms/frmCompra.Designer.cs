@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lbTextoTotal = new System.Windows.Forms.Label();
@@ -44,16 +45,15 @@
             this.txtNombreProveedor = new System.Windows.Forms.TextBox();
             this.lbProveedor = new System.Windows.Forms.Label();
             this.lbTituloRegistro = new System.Windows.Forms.Label();
-            this.dgvDetalle = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvDetalle = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -74,175 +74,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(964, 547);
             this.splitContainer1.SplitterDistance = 460;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Green;
-            this.btnCancelar.Location = new System.Drawing.Point(218, 319);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 36);
-            this.btnCancelar.TabIndex = 13;
-            this.btnCancelar.Text = "Cancelar Compra";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Green;
-            this.btnRegistrar.Location = new System.Drawing.Point(72, 319);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(98, 36);
-            this.btnRegistrar.TabIndex = 12;
-            this.btnRegistrar.Text = "Registrar Compra";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // lbTextoTotal
-            // 
-            this.lbTextoTotal.AutoSize = true;
-            this.lbTextoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTextoTotal.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbTextoTotal.Location = new System.Drawing.Point(144, 382);
-            this.lbTextoTotal.Name = "lbTextoTotal";
-            this.lbTextoTotal.Size = new System.Drawing.Size(76, 13);
-            this.lbTextoTotal.TabIndex = 11;
-            this.lbTextoTotal.Text = "Total: $0.00";
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitar.ForeColor = System.Drawing.Color.Green;
-            this.btnQuitar.Location = new System.Drawing.Point(218, 263);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(84, 41);
-            this.btnQuitar.TabIndex = 10;
-            this.btnQuitar.Text = "Quitar Producto";
-            this.btnQuitar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(72, 262);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(98, 42);
-            this.btnAgregar.TabIndex = 9;
-            this.btnAgregar.Text = "Agregar Producto";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txtCostoUnitario
-            // 
-            this.txtCostoUnitario.Location = new System.Drawing.Point(147, 200);
-            this.txtCostoUnitario.Name = "txtCostoUnitario";
-            this.txtCostoUnitario.Size = new System.Drawing.Size(146, 20);
-            this.txtCostoUnitario.TabIndex = 8;
-            this.txtCostoUnitario.TextChanged += new System.EventHandler(this.txtCostoUnitario_TextChanged);
-            this.txtCostoUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostoUnitario_KeyPress);
-            // 
-            // lbCostoUnitario
-            // 
-            this.lbCostoUnitario.AutoSize = true;
-            this.lbCostoUnitario.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCostoUnitario.Location = new System.Drawing.Point(15, 203);
-            this.lbCostoUnitario.Name = "lbCostoUnitario";
-            this.lbCostoUnitario.Size = new System.Drawing.Size(115, 25);
-            this.lbCostoUnitario.TabIndex = 7;
-            this.lbCostoUnitario.Text = "Costo Unitario:";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(147, 151);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(146, 20);
-            this.txtCantidad.TabIndex = 6;
-            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
-            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
-            // 
-            // txtCodigoBarra
-            // 
-            this.txtCodigoBarra.Location = new System.Drawing.Point(147, 107);
-            this.txtCodigoBarra.Name = "txtCodigoBarra";
-            this.txtCodigoBarra.Size = new System.Drawing.Size(146, 20);
-            this.txtCodigoBarra.TabIndex = 5;
-            this.txtCodigoBarra.TextChanged += new System.EventHandler(this.txtCodigoBarra_TextChanged);
-            // 
-            // lbCantidad
-            // 
-            this.lbCantidad.AutoSize = true;
-            this.lbCantidad.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantidad.Location = new System.Drawing.Point(15, 151);
-            this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(78, 25);
-            this.lbCantidad.TabIndex = 4;
-            this.lbCantidad.Text = "Cantidad:";
-            // 
-            // lbCodigoBarra
-            // 
-            this.lbCodigoBarra.AutoSize = true;
-            this.lbCodigoBarra.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigoBarra.Location = new System.Drawing.Point(15, 110);
-            this.lbCodigoBarra.Name = "lbCodigoBarra";
-            this.lbCodigoBarra.Size = new System.Drawing.Size(134, 25);
-            this.lbCodigoBarra.TabIndex = 0;
-            this.lbCodigoBarra.Text = "Código de Barras:";
-            // 
-            // btnBuscarProveedor
-            // 
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(305, 58);
-            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(58, 23);
-            this.btnBuscarProveedor.TabIndex = 3;
-            this.btnBuscarProveedor.Text = "Buscar";
-            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
-            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
-            // 
-            // txtNombreProveedor
-            // 
-            this.txtNombreProveedor.Location = new System.Drawing.Point(147, 61);
-            this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(146, 20);
-            this.txtNombreProveedor.TabIndex = 0;
-            this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombreProveedor_TextChanged);
-            // 
-            // lbProveedor
-            // 
-            this.lbProveedor.AutoSize = true;
-            this.lbProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProveedor.Location = new System.Drawing.Point(15, 65);
-            this.lbProveedor.Name = "lbProveedor";
-            this.lbProveedor.Size = new System.Drawing.Size(85, 25);
-            this.lbProveedor.TabIndex = 2;
-            this.lbProveedor.Text = "Proveedor:";
-            // 
-            // lbTituloRegistro
-            // 
-            this.lbTituloRegistro.AutoSize = true;
-            this.lbTituloRegistro.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTituloRegistro.Location = new System.Drawing.Point(122, 5);
-            this.lbTituloRegistro.Name = "lbTituloRegistro";
-            this.lbTituloRegistro.Size = new System.Drawing.Size(223, 39);
-            this.lbTituloRegistro.TabIndex = 1;
-            this.lbTituloRegistro.Text = "Registro de Compra";
-            // 
-            // dgvDetalle
-            // 
-            this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDetalle.Location = new System.Drawing.Point(0, 0);
-            this.dgvDetalle.Name = "dgvDetalle";
-            this.dgvDetalle.ReadOnly = true;
-            this.dgvDetalle.Size = new System.Drawing.Size(463, 433);
-            this.dgvDetalle.TabIndex = 0;
             // 
             // panel1
             // 
@@ -265,6 +96,165 @@
             this.panel1.Size = new System.Drawing.Size(382, 432);
             this.panel1.TabIndex = 14;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Green;
+            this.btnCancelar.Location = new System.Drawing.Point(218, 334);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(84, 36);
+            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.Text = "Cancelar Compra";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.Green;
+            this.btnRegistrar.Location = new System.Drawing.Point(72, 334);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(98, 36);
+            this.btnRegistrar.TabIndex = 12;
+            this.btnRegistrar.Text = "Registrar Compra";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // lbTextoTotal
+            // 
+            this.lbTextoTotal.AutoSize = true;
+            this.lbTextoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTextoTotal.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbTextoTotal.Location = new System.Drawing.Point(144, 397);
+            this.lbTextoTotal.Name = "lbTextoTotal";
+            this.lbTextoTotal.Size = new System.Drawing.Size(76, 13);
+            this.lbTextoTotal.TabIndex = 11;
+            this.lbTextoTotal.Text = "Total: $0.00";
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitar.ForeColor = System.Drawing.Color.Green;
+            this.btnQuitar.Location = new System.Drawing.Point(218, 278);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(84, 41);
+            this.btnQuitar.TabIndex = 10;
+            this.btnQuitar.Text = "Quitar Producto";
+            this.btnQuitar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Green;
+            this.btnAgregar.Location = new System.Drawing.Point(72, 277);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(98, 42);
+            this.btnAgregar.TabIndex = 9;
+            this.btnAgregar.Text = "Agregar Producto";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtCostoUnitario
+            // 
+            this.txtCostoUnitario.Location = new System.Drawing.Point(147, 210);
+            this.txtCostoUnitario.Name = "txtCostoUnitario";
+            this.txtCostoUnitario.Size = new System.Drawing.Size(135, 20);
+            this.txtCostoUnitario.TabIndex = 8;
+            this.txtCostoUnitario.TextChanged += new System.EventHandler(this.txtCostoUnitario_TextChanged);
+            this.txtCostoUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostoUnitario_KeyPress);
+            // 
+            // lbCostoUnitario
+            // 
+            this.lbCostoUnitario.AutoSize = true;
+            this.lbCostoUnitario.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCostoUnitario.Location = new System.Drawing.Point(15, 205);
+            this.lbCostoUnitario.Name = "lbCostoUnitario";
+            this.lbCostoUnitario.Size = new System.Drawing.Size(115, 25);
+            this.lbCostoUnitario.TabIndex = 7;
+            this.lbCostoUnitario.Text = "Costo Unitario:";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(147, 151);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(135, 20);
+            this.txtCantidad.TabIndex = 6;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            // 
+            // txtCodigoBarra
+            // 
+            this.txtCodigoBarra.Location = new System.Drawing.Point(147, 97);
+            this.txtCodigoBarra.Name = "txtCodigoBarra";
+            this.txtCodigoBarra.Size = new System.Drawing.Size(135, 20);
+            this.txtCodigoBarra.TabIndex = 5;
+            this.txtCodigoBarra.TextChanged += new System.EventHandler(this.txtCodigoBarra_TextChanged);
+            // 
+            // lbCantidad
+            // 
+            this.lbCantidad.AutoSize = true;
+            this.lbCantidad.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCantidad.Location = new System.Drawing.Point(15, 151);
+            this.lbCantidad.Name = "lbCantidad";
+            this.lbCantidad.Size = new System.Drawing.Size(78, 25);
+            this.lbCantidad.TabIndex = 4;
+            this.lbCantidad.Text = "Cantidad:";
+            // 
+            // lbCodigoBarra
+            // 
+            this.lbCodigoBarra.AutoSize = true;
+            this.lbCodigoBarra.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigoBarra.Location = new System.Drawing.Point(7, 90);
+            this.lbCodigoBarra.Name = "lbCodigoBarra";
+            this.lbCodigoBarra.Size = new System.Drawing.Size(134, 25);
+            this.lbCodigoBarra.TabIndex = 0;
+            this.lbCodigoBarra.Text = "Código de Barras:";
+            // 
+            // btnBuscarProveedor
+            // 
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(306, 46);
+            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(58, 23);
+            this.btnBuscarProveedor.TabIndex = 3;
+            this.btnBuscarProveedor.Text = "Buscar";
+            this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
+            // 
+            // txtNombreProveedor
+            // 
+            this.txtNombreProveedor.Location = new System.Drawing.Point(147, 48);
+            this.txtNombreProveedor.Name = "txtNombreProveedor";
+            this.txtNombreProveedor.Size = new System.Drawing.Size(135, 20);
+            this.txtNombreProveedor.TabIndex = 0;
+            this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombreProveedor_TextChanged);
+            // 
+            // lbProveedor
+            // 
+            this.lbProveedor.AutoSize = true;
+            this.lbProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProveedor.Location = new System.Drawing.Point(15, 43);
+            this.lbProveedor.Name = "lbProveedor";
+            this.lbProveedor.Size = new System.Drawing.Size(85, 25);
+            this.lbProveedor.TabIndex = 2;
+            this.lbProveedor.Text = "Proveedor:";
+            // 
+            // lbTituloRegistro
+            // 
+            this.lbTituloRegistro.AutoSize = true;
+            this.lbTituloRegistro.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTituloRegistro.Location = new System.Drawing.Point(122, 5);
+            this.lbTituloRegistro.Name = "lbTituloRegistro";
+            this.lbTituloRegistro.Size = new System.Drawing.Size(223, 39);
+            this.lbTituloRegistro.TabIndex = 1;
+            this.lbTituloRegistro.Text = "Registro de Compra";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvDetalle);
@@ -272,6 +262,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(463, 433);
             this.panel2.TabIndex = 1;
+            // 
+            // dgvDetalle
+            // 
+            this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDetalle.Location = new System.Drawing.Point(0, 0);
+            this.dgvDetalle.Name = "dgvDetalle";
+            this.dgvDetalle.ReadOnly = true;
+            this.dgvDetalle.Size = new System.Drawing.Size(463, 433);
+            this.dgvDetalle.TabIndex = 0;
             // 
             // frmCompra
             // 
@@ -289,10 +289,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.ResumeLayout(false);
 
         }
