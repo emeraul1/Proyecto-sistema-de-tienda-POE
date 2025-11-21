@@ -1,4 +1,4 @@
-﻿using Sistema_tienda_POE.UoW;
+using Sistema_tienda_POE.UoW;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
