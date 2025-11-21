@@ -4,7 +4,7 @@ using Sistema_tienda_POE.Repositorios;
 using System;
 using System.Data;
 using System.Windows.Forms;
-using System.Globalization; 
+using System.Globalization;
 namespace Sistema_tienda_POE.Forms
 {
     public partial class frmCompra : Form
@@ -21,7 +21,9 @@ namespace Sistema_tienda_POE.Forms
         private void frmCompra_Load(object sender, EventArgs e)
         {
             ConfigurarTabla();
-            Limpiar(); 
+            Limpiar();
+            // Esto ayuda a evitar el error de NullReferenceException en el bucle de registro.
+            dgvDetalle.AllowUserToAddRows = false;
         }
 
         private void ConfigurarTabla()
@@ -41,6 +43,7 @@ namespace Sistema_tienda_POE.Forms
         // buscar proveedor
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
+
             frmBuscarProveedor ventana = new frmBuscarProveedor();
             ventana.ShowDialog();
 
@@ -53,15 +56,6 @@ namespace Sistema_tienda_POE.Forms
 
 
         // buscar producto por codigo
-        private void txtCodigoBarra_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                BuscarProducto();
-                e.Handled = true;
-            }
-        }
-
         private void BuscarProducto()
         {
             // Limpiamos la información del producto antes de buscar
@@ -73,12 +67,13 @@ namespace Sistema_tienda_POE.Forms
                 return;
             }
 
-            using (SqlConnection conexion = ConexionBD.ObtenerConexion())
+            using (Microsoft.Data.SqlClient.SqlConnection conexion = ConexionBD.ObtenerConexion())
             {
                 try
                 {
                     conexion.Open();
 
+                    // Consulta SQL
                     SqlCommand cmd = new SqlCommand(
                         "SELECT IdProducto, Nombre, Costo FROM Producto WHERE CodigoBarras = @codigo",
                         conexion);
@@ -89,11 +84,13 @@ namespace Sistema_tienda_POE.Forms
 
                     if (dr.Read())
                     {
+                        // Línea que te da error, revisada y limpia
                         idProductoSeleccionado = (int)dr["IdProducto"];
-                        nombreProductoSeleccionado = dr["Nombre"].ToString();
+                        nombreProductoSeleccionado = dr["Nombre"].ToString(); // ⬅️ AHORA LIMPIA
 
-                        // Formato de costo para mostrar, sin culture específica para nivel intermedio.
-                        txtCostoUnitario.Text = dr["Costo"].ToString();
+                        // Formato de costo para decimales
+                        decimal costo = (decimal)dr["Costo"];
+                        txtCostoUnitario.Text = costo.ToString("N2");
 
                         txtCantidad.ReadOnly = false;
                         txtCantidad.Focus();
@@ -111,14 +108,14 @@ namespace Sistema_tienda_POE.Forms
             }
         }
 
-        // VALIDACIONES (Permitir solo dígitos y control en Cantidad)
+        // Permitir solo dígitos en Cantidad
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        // VALIDACIONES (Permitir dígitos, punto, coma y control en Costo)
+        // Permitir dígitos, punto, coma y control en Costo
         private void txtCostoUnitario_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir dígitos, la tecla de control (como backspace) y separadores decimales
@@ -129,14 +126,21 @@ namespace Sistema_tienda_POE.Forms
             // Controlar que solo haya un punto o coma decimal
             if ((e.KeyChar == '.') || (e.KeyChar == ','))
             {
-                if (((TextBox)sender).Text.Contains(".") || ((TextBox)sender).Text.Contains(","))
+                string separador = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
+                if (((TextBox)sender).Text.Contains(separador))
+                {
+                    e.Handled = true;
+                }
+                // Si el carácter presionado no es el separador actual, también lo bloqueamos si ya existe uno.
+                else if (e.KeyChar.ToString() != separador)
                 {
                     e.Handled = true;
                 }
             }
         }
 
-        // AGREGAR PRODUCTO AL DETALLE
+        // agrega el prodcto al detalle
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (idProductoSeleccionado == 0)
@@ -152,8 +156,8 @@ namespace Sistema_tienda_POE.Forms
                 return;
             }
 
-            // Intenta parsear el costo de forma segura, usando la cultura actual del sistema o InvariantCulture
-            if (!decimal.TryParse(txtCostoUnitario.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out decimal costo) || costo <= 0)
+            // Intenta parsear el costo de forma segura, usando la cultura actual del sistema
+            if (!decimal.TryParse(txtCostoUnitario.Text, NumberStyles.Currency | NumberStyles.Number, CultureInfo.CurrentCulture, out decimal costo) || costo <= 0)
             {
                 MessageBox.Show("Ingrese un costo unitario válido y mayor a cero.");
                 txtCostoUnitario.Focus();
@@ -168,15 +172,15 @@ namespace Sistema_tienda_POE.Forms
                 txtCodigoBarra.Text,
                 nombreProductoSeleccionado,
                 cantidad,
-                costo, // Se mantiene como decimal para cálculo interno
-                subtotal // Se mantiene como decimal para cálculo interno
+                costo,
+                subtotal // Se mantienen como decimal para calculo interno
             );
 
             ActualizarTotal();
             LimpiarProducto(); // Limpia los campos de producto para la siguiente adición
         }
 
-        // QUITAR PRODUCTO
+        // quitar producto
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             if (dgvDetalle.SelectedRows.Count > 0)
@@ -203,6 +207,9 @@ namespace Sistema_tienda_POE.Forms
 
             foreach (DataGridViewRow fila in dgvDetalle.Rows)
             {
+                // La verificación de IsNewRow no es necesaria si AllowUserToAddRows = false, pero es una buena práctica
+                if (fila.IsNewRow) continue;
+
                 // Verifica que el valor exista y sea convertible
                 if (fila.Cells["Subtotal"].Value != null)
                 {
@@ -225,9 +232,9 @@ namespace Sistema_tienda_POE.Forms
 
         private void Limpiar()
         {
-            LimpiarProducto(); // Limpia la sección del producto
+            LimpiarProducto(); // limpia la sección del producto
 
-            // Limpia la sección del proveedor y detalle
+            // limpia la sección del proveedor y detalle
             idProveedorSeleccionado = 0;
             txtNombreProveedor.Text = "";
             dgvDetalle.Rows.Clear();
@@ -248,6 +255,7 @@ namespace Sistema_tienda_POE.Forms
                 return;
             }
 
+            // Esta validación debe contemplar que la única fila puede ser la vacía de adición
             if (dgvDetalle.Rows.Count == 0 || (dgvDetalle.Rows.Count == 1 && dgvDetalle.AllowUserToAddRows))
             {
                 MessageBox.Show("Agregue productos al detalle de la compra.");
@@ -261,14 +269,14 @@ namespace Sistema_tienda_POE.Forms
 
                 try
                 {
-                    // INSTANCIACIÓN DEL REPOSITORIO
+                  
                     CompraRepository repo = new CompraRepository(conexion, transaccion);
 
-                    // 🛠️ CÓDIGO FALTANTE: Creación del objeto Compra 
+                    // Creación del objeto Compra
                     Compra compra = new Compra()
                     {
                         IdProveedor = idProveedorSeleccionado,
-                        IdUsuario = 4, // IdUsuario fijo. Esto debería ser dinámico con el login, pero se mantiene fijo por ahora.
+                        IdUsuario = 4, // IdUsuario fijo.
                         Fecha = DateTime.Now,
                         Subtotal = ObtenerTotal(),
                         Descuento = 0,
@@ -277,7 +285,6 @@ namespace Sistema_tienda_POE.Forms
                         Estado = true,
                         Observacion = ""
                     };
-                    // 🛠️ FIN DEL CÓDIGO FALTANTE
 
                     // Se inserta la cabecera de la compra.
                     int idCompra = repo.InsertCompra(compra);
@@ -285,7 +292,7 @@ namespace Sistema_tienda_POE.Forms
                     // Se insertan los detalles y se actualiza el stock.
                     foreach (DataGridViewRow fila in dgvDetalle.Rows)
                     {
-                        // Ignorar la fila de adición (solución a NullReferenceException anterior)
+                        // Ignorar la fila de adición
                         if (fila.IsNewRow) continue;
 
                         DetalleCompra det = new DetalleCompra()
@@ -316,5 +323,3 @@ namespace Sistema_tienda_POE.Forms
         }
     }
 }
-
-
