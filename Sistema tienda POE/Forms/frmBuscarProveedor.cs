@@ -107,5 +107,10 @@ namespace Sistema_tienda_POE.Forms
                 btnSeleccionar_Click(sender, e);
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -25,6 +25,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbInfo = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,12 +118,23 @@
             this.lbInfo.TabIndex = 7;
             this.lbInfo.Text = "Buscar Proveedor";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(407, 75);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmBuscarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(564, 577);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

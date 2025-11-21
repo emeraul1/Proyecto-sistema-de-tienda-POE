@@ -43,9 +43,10 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lbInfo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -197,8 +198,20 @@
             this.panel1.Size = new System.Drawing.Size(1118, 402);
             this.panel1.TabIndex = 13;
             // 
+            // lbInfo
+            // 
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.Location = new System.Drawing.Point(369, 0);
+            this.lbInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(265, 39);
+            this.lbInfo.TabIndex = 13;
+            this.lbInfo.Text = "Gestion de Proveedores";
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.txtIdProveedor);
             this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.btnEliminar);
@@ -218,17 +231,6 @@
             this.panel2.Size = new System.Drawing.Size(982, 306);
             this.panel2.TabIndex = 13;
             // 
-            // lbInfo
-            // 
-            this.lbInfo.AutoSize = true;
-            this.lbInfo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfo.Location = new System.Drawing.Point(369, 0);
-            this.lbInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(265, 39);
-            this.lbInfo.TabIndex = 13;
-            this.lbInfo.Text = "Gestion de Proveedores";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
@@ -236,6 +238,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1183, 125);
             this.panel3.TabIndex = 14;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(494, 115);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(112, 42);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmProveedor
             // 
@@ -280,5 +292,6 @@
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
