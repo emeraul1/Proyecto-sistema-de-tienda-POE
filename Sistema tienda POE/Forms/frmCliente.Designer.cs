@@ -144,7 +144,7 @@
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(249, 230);
+            this.btnAgregar.Location = new System.Drawing.Point(192, 227);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(64, 39);
@@ -166,7 +166,7 @@
             this.panel1.Controls.Add(this.txtApellidos);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtNombres);
-            this.panel1.Location = new System.Drawing.Point(98, 141);
+            this.panel1.Location = new System.Drawing.Point(4, 131);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(410, 286);
             this.panel1.TabIndex = 12;
@@ -175,7 +175,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(247, 89);
+            this.label1.Location = new System.Drawing.Point(153, 79);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 39);
@@ -195,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(651, 503);
+            this.ClientSize = new System.Drawing.Size(417, 459);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);

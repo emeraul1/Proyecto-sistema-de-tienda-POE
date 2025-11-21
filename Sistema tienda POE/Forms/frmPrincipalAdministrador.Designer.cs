@@ -67,7 +67,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Green;
-            this.btnUsuarios.Location = new System.Drawing.Point(498, 88);
+            this.btnUsuarios.Location = new System.Drawing.Point(482, 88);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(159, 40);
@@ -118,7 +118,7 @@
             this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedores.ForeColor = System.Drawing.Color.Green;
-            this.btnProveedores.Location = new System.Drawing.Point(250, 281);
+            this.btnProveedores.Location = new System.Drawing.Point(264, 284);
             this.btnProveedores.Margin = new System.Windows.Forms.Padding(2);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(194, 40);
@@ -133,7 +133,7 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.Green;
-            this.btnCompras.Location = new System.Drawing.Point(498, 197);
+            this.btnCompras.Location = new System.Drawing.Point(482, 197);
             this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(159, 40);
@@ -148,7 +148,7 @@
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.ForeColor = System.Drawing.Color.Green;
-            this.btnVender.Location = new System.Drawing.Point(56, 192);
+            this.btnVender.Location = new System.Drawing.Point(82, 192);
             this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(159, 45);
@@ -163,7 +163,7 @@
             this.tbnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbnProductos.ForeColor = System.Drawing.Color.Green;
-            this.tbnProductos.Location = new System.Drawing.Point(56, 89);
+            this.tbnProductos.Location = new System.Drawing.Point(82, 89);
             this.tbnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tbnProductos.Name = "tbnProductos";
             this.tbnProductos.Size = new System.Drawing.Size(159, 39);
