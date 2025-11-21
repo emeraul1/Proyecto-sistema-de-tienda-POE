@@ -31,15 +31,17 @@
             this.btnCerarSesion = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbInformacion = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.tbnProductos = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbInformacion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             this.btnCerarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerarSesion.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnCerarSesion.Location = new System.Drawing.Point(24, 537);
-            this.btnCerarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerarSesion.Name = "btnCerarSesion";
             this.btnCerarSesion.Size = new System.Drawing.Size(167, 34);
             this.btnCerarSesion.TabIndex = 0;
@@ -66,7 +68,7 @@
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Green;
             this.btnUsuarios.Location = new System.Drawing.Point(498, 88);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(159, 40);
             this.btnUsuarios.TabIndex = 1;
@@ -82,10 +84,63 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(972, 595);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbInformacion
+            // 
+            this.lbInformacion.AutoSize = true;
+            this.lbInformacion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInformacion.Location = new System.Drawing.Point(482, 40);
+            this.lbInformacion.Name = "lbInformacion";
+            this.lbInformacion.Size = new System.Drawing.Size(201, 42);
+            this.lbInformacion.TabIndex = 10;
+            this.lbInformacion.Text = "ADMINISTRADOR";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnProveedores);
+            this.panel2.Controls.Add(this.btnCompras);
+            this.panel2.Controls.Add(this.btnUsuarios);
+            this.panel2.Controls.Add(this.btnVender);
+            this.panel2.Controls.Add(this.tbnProductos);
+            this.panel2.Location = new System.Drawing.Point(239, 117);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(703, 387);
+            this.panel2.TabIndex = 9;
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.Green;
+            this.btnProveedores.Location = new System.Drawing.Point(250, 281);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(194, 40);
+            this.btnProveedores.TabIndex = 8;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.UseVisualStyleBackColor = true;
+            this.btnProveedores.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCompras
+            // 
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.Green;
+            this.btnCompras.Location = new System.Drawing.Point(498, 197);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(159, 40);
+            this.btnCompras.TabIndex = 7;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVender
             // 
@@ -94,7 +149,7 @@
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.ForeColor = System.Drawing.Color.Green;
             this.btnVender.Location = new System.Drawing.Point(56, 192);
-            this.btnVender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(159, 45);
             this.btnVender.TabIndex = 6;
@@ -109,7 +164,7 @@
             this.tbnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbnProductos.ForeColor = System.Drawing.Color.Green;
             this.tbnProductos.Location = new System.Drawing.Point(56, 89);
-            this.tbnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tbnProductos.Name = "tbnProductos";
             this.tbnProductos.Size = new System.Drawing.Size(159, 39);
             this.tbnProductos.TabIndex = 5;
@@ -127,26 +182,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(233, 595);
             this.panel4.TabIndex = 8;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnUsuarios);
-            this.panel2.Controls.Add(this.btnVender);
-            this.panel2.Controls.Add(this.tbnProductos);
-            this.panel2.Location = new System.Drawing.Point(239, 117);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 387);
-            this.panel2.TabIndex = 9;
-            // 
-            // lbInformacion
-            // 
-            this.lbInformacion.AutoSize = true;
-            this.lbInformacion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInformacion.Location = new System.Drawing.Point(482, 40);
-            this.lbInformacion.Name = "lbInformacion";
-            this.lbInformacion.Size = new System.Drawing.Size(201, 42);
-            this.lbInformacion.TabIndex = 10;
-            this.lbInformacion.Text = "ADMINISTRADOR";
             // 
             // pictureBox1
             // 
@@ -167,15 +202,15 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipalAdministrador";
             this.Text = "Menu Principal Administrador";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -192,5 +227,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbInformacion;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnCompras;
+        private System.Windows.Forms.Button btnProveedores;
     }
 }

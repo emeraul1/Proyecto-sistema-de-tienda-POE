@@ -23,7 +23,7 @@ namespace Sistema_tienda_POE
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin login = new frmLogin();
 
-             RepoDb.SqlServerBootstrap.Initialize();    
+            GlobalConfiguration.Setup().UseSqlServer();
 
             if (login.ShowDialog() == DialogResult.OK)
             {

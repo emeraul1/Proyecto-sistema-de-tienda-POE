@@ -189,14 +189,24 @@
   <ItemGroup>
     <Compile Include="Clases\Categoria.cs" />
     <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Compra.cs" />
+    <Compile Include="Clases\ConexionBD.cs" />
+    <Compile Include="Clases\DetalleCompra.cs" />
     <Compile Include="Clases\DetalleVenta.cs" />
     <Compile Include="Clases\GlobalUsuario.cs" />
     <Compile Include="Clases\MetodoPago.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Rol.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Venta.cs" />
     <Compile Include="Encriptador.cs" />
+    <Compile Include="Forms\frmBuscarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuscarProveedor.Designer.cs">
+      <DependentUpon>frmBuscarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCategoriaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +218,12 @@
     </Compile>
     <Compile Include="Forms\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompra.Designer.cs">
+      <DependentUpon>frmCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
@@ -239,6 +255,12 @@
     <Compile Include="Forms\frmProductosCmd.Designer.cs">
       <DependentUpon>frmProductosCmd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUsuarioCmd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,9 +283,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\CategoriaRepository.cs" />
     <Compile Include="Repositorios\ClienteRepository.cs" />
+    <Compile Include="Repositorios\CompraRepository.cs" />
+    <Compile Include="Repositorios\DetalleCompraRepository.cs" />
     <Compile Include="Repositorios\DetalleVentaRepository.cs" />
     <Compile Include="Repositorios\MetodoPagoRepository.cs" />
     <Compile Include="Repositorios\ProductoRepository.cs" />
+    <Compile Include="Repositorios\ProveedorRepository.cs" />
     <Compile Include="Repositorios\RolResopitory.cs" />
     <Compile Include="Repositorios\UsuarioRepository.cs" />
     <Compile Include="Repositorios\VentaRepository.cs" />
@@ -274,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompra.resx">
+      <DependentUpon>frmCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -289,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmProductosCmd.resx">
       <DependentUpon>frmProductosCmd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsuarioCmd.resx">
       <DependentUpon>frmUsuarioCmd.cs</DependentUpon>
