@@ -114,9 +114,9 @@
             this.panel1.Controls.Add(this.cmbMetodoPago);
             this.panel1.Controls.Add(this.txtObservacion);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(93, 114);
+            this.panel1.Location = new System.Drawing.Point(38, 114);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 269);
+            this.panel1.Size = new System.Drawing.Size(874, 269);
             this.panel1.TabIndex = 20;
             // 
             // btnAgregar
@@ -136,7 +136,7 @@
             // 
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(174, 130);
+            this.lbTotal.Location = new System.Drawing.Point(195, 152);
             this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(46, 25);
@@ -147,7 +147,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 33);
+            this.label2.Location = new System.Drawing.Point(23, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 25);
@@ -158,7 +158,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 132);
+            this.label8.Location = new System.Drawing.Point(44, 154);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 25);
@@ -169,7 +169,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 72);
+            this.label3.Location = new System.Drawing.Point(23, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 25);
@@ -180,7 +180,7 @@
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.Green;
-            this.btnBuscar.Location = new System.Drawing.Point(647, 70);
+            this.btnBuscar.Location = new System.Drawing.Point(770, 72);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(84, 25);
@@ -193,7 +193,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(362, 33);
+            this.label4.Location = new System.Drawing.Point(485, 35);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 25);
@@ -204,7 +204,7 @@
             // 
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.ForeColor = System.Drawing.Color.Green;
-            this.btnVender.Location = new System.Drawing.Point(517, 205);
+            this.btnVender.Location = new System.Drawing.Point(640, 207);
             this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(103, 49);
@@ -217,7 +217,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(362, 70);
+            this.label5.Location = new System.Drawing.Point(485, 72);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 25);
@@ -239,7 +239,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(179, 33);
+            this.txtCodigo.Location = new System.Drawing.Point(179, 46);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(140, 20);
@@ -247,7 +247,7 @@
             // 
             // txtDUI
             // 
-            this.txtDUI.Location = new System.Drawing.Point(485, 101);
+            this.txtDUI.Location = new System.Drawing.Point(608, 103);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(2);
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(135, 20);
@@ -255,7 +255,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(179, 77);
+            this.txtCantidad.Location = new System.Drawing.Point(179, 90);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(140, 20);
@@ -265,7 +265,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(362, 104);
+            this.label7.Location = new System.Drawing.Point(485, 106);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 25);
@@ -274,7 +274,7 @@
             // 
             // txtDineroCliente
             // 
-            this.txtDineroCliente.Location = new System.Drawing.Point(485, 70);
+            this.txtDineroCliente.Location = new System.Drawing.Point(608, 72);
             this.txtDineroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtDineroCliente.Name = "txtDineroCliente";
             this.txtDineroCliente.Size = new System.Drawing.Size(135, 20);
@@ -283,7 +283,7 @@
             // cmbMetodoPago
             // 
             this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Location = new System.Drawing.Point(485, 37);
+            this.cmbMetodoPago.Location = new System.Drawing.Point(608, 39);
             this.cmbMetodoPago.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMetodoPago.Name = "cmbMetodoPago";
             this.cmbMetodoPago.Size = new System.Drawing.Size(135, 21);
@@ -291,7 +291,7 @@
             // 
             // txtObservacion
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(485, 137);
+            this.txtObservacion.Location = new System.Drawing.Point(608, 139);
             this.txtObservacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(135, 20);
@@ -301,7 +301,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(362, 139);
+            this.label6.Location = new System.Drawing.Point(485, 141);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 25);

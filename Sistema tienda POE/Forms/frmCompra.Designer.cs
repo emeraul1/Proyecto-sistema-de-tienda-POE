@@ -101,7 +101,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Green;
-            this.btnCancelar.Location = new System.Drawing.Point(218, 334);
+            this.btnCancelar.Location = new System.Drawing.Point(215, 362);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 36);
             this.btnCancelar.TabIndex = 13;
@@ -114,7 +114,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.Green;
-            this.btnRegistrar.Location = new System.Drawing.Point(72, 334);
+            this.btnRegistrar.Location = new System.Drawing.Point(69, 362);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(98, 36);
             this.btnRegistrar.TabIndex = 12;
@@ -126,8 +126,8 @@
             // 
             this.lbTextoTotal.AutoSize = true;
             this.lbTextoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTextoTotal.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbTextoTotal.Location = new System.Drawing.Point(144, 397);
+            this.lbTextoTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbTextoTotal.Location = new System.Drawing.Point(144, 263);
             this.lbTextoTotal.Name = "lbTextoTotal";
             this.lbTextoTotal.Size = new System.Drawing.Size(76, 13);
             this.lbTextoTotal.TabIndex = 11;
@@ -138,7 +138,7 @@
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitar.ForeColor = System.Drawing.Color.Green;
-            this.btnQuitar.Location = new System.Drawing.Point(218, 278);
+            this.btnQuitar.Location = new System.Drawing.Point(215, 306);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(84, 41);
             this.btnQuitar.TabIndex = 10;
@@ -152,7 +152,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(72, 277);
+            this.btnAgregar.Location = new System.Drawing.Point(69, 305);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(98, 42);
             this.btnAgregar.TabIndex = 9;

@@ -65,7 +65,7 @@
             this.dgvProveedores.AllowUserToDeleteRows = false;
             this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(30, 68);
+            this.dgvProveedores.Location = new System.Drawing.Point(30, 80);
             this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
@@ -79,7 +79,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSeleccionar.Location = new System.Drawing.Point(151, 344);
+            this.btnSeleccionar.Location = new System.Drawing.Point(151, 355);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(130, 46);
             this.btnSeleccionar.TabIndex = 4;

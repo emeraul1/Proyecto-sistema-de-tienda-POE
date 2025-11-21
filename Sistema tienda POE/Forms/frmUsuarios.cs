@@ -56,7 +56,7 @@ namespace Sistema_tienda_POE.Forms
                 dgvUsurios.DataSource = lista;
                 dgvUsurios.Columns["IdUsuario"].Visible = false;
                 dgvUsurios.Columns["Contraseña"].Visible = false;
-                dgvUsurios.Columns["Estado"].Visible = false;
+                dgvUsurios.Columns["Estado"].Visible = true;
                 dgvUsurios.Columns["IdRol"].Visible = false;
                 dgvUsurios.Columns["NombreRol"].HeaderText = "Rol";
                 dgvUsurios.Refresh();
