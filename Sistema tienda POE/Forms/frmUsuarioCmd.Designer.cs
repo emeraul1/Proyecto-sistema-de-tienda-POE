@@ -52,7 +52,7 @@
             // 
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Location = new System.Drawing.Point(111, 141);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(92, 21);
             this.cmbRol.TabIndex = 31;
@@ -60,7 +60,7 @@
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(447, 83);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(173, 20);
             this.txtContraseña.TabIndex = 30;
@@ -68,7 +68,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(447, 30);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(173, 20);
             this.txtCodigo.TabIndex = 29;
@@ -76,7 +76,7 @@
             // txtApellidos
             // 
             this.txtApellidos.Location = new System.Drawing.Point(111, 85);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(175, 20);
             this.txtApellidos.TabIndex = 28;
@@ -84,7 +84,7 @@
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(111, 30);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(175, 20);
             this.txtNombres.TabIndex = 27;
@@ -94,7 +94,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.ForeColor = System.Drawing.Color.Green;
             this.btnActualizar.Location = new System.Drawing.Point(356, 167);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(84, 45);
             this.btnActualizar.TabIndex = 25;
@@ -172,7 +172,7 @@
             // 
             this.chbEstado.AutoSize = true;
             this.chbEstado.Location = new System.Drawing.Point(112, 192);
-            this.chbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.chbEstado.Name = "chbEstado";
             this.chbEstado.Size = new System.Drawing.Size(15, 14);
             this.chbEstado.TabIndex = 33;
@@ -194,7 +194,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCancelar.Location = new System.Drawing.Point(533, 167);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 45);
             this.btnCancelar.TabIndex = 35;
@@ -240,8 +240,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUsuarioCmd";
             this.Text = "Actualizar Usuario";
             this.Load += new System.EventHandler(this.frmUsuarioCmd_Load);
