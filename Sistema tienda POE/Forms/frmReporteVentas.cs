@@ -39,19 +39,21 @@ namespace Sistema_tienda_POE.Forms
             using (var uow = new UnitOfwork(_connectionString))
             {
                 var listaCategorias = uow.Categoria.GetByEstado(true).ToList();
+
                 listaCategorias.Add(new Categoria
                 {
                     IdCategoria = 0,
                     Nombre = "Todas"
                 });
+
                 cmbCategoria.DataSource = null;
                 cmbCategoria.DataSource = listaCategorias;
                 cmbCategoria.DisplayMember = "Nombre";
                 cmbCategoria.ValueMember = "IdCategoria";
-                cmbCategoria.SelectedIndex = -1;
+
+                cmbCategoria.SelectedValue = 0; 
                 cmbCategoria.Refresh();
             }
-            cmbCategoria.SelectedIndex = -1;
         }
 
         private void ConfigurarDataGridView()

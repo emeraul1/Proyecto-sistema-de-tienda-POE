@@ -32,7 +32,7 @@ namespace Sistema_tienda_POE.Repositorios
             v.FechaHora AS Fecha, 
              LTRIM(RTRIM(u.Nombres + ' ' + ISNULL(u.Apellidos, ''))) AS VendidoPor,
             mp.Nombre AS MetodoPago,
-            p.Costo AS CostoUnitario
+            p.Costo AS CostoUnitario,
             (dv.Cantidad * dv.PrecioUnitario) AS Total
         FROM DetalleVenta dv
         INNER JOIN Venta v ON dv.IdVenta = v.IdVenta
