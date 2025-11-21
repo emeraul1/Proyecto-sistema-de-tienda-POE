@@ -27,6 +27,7 @@ namespace Sistema_tienda_POE.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //cerrar sesion
             this.Close();
         }
     }
