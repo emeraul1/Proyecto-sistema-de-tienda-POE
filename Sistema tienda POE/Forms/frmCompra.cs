@@ -314,6 +314,26 @@ namespace Sistema_tienda_POE.Forms
                 }
             }
         }
+
+        private void txtCodigoBarra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCostoUnitario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

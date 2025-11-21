@@ -78,7 +78,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
             this.btnAgregar.Location = new System.Drawing.Point(451, 48);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAgregar.Size = new System.Drawing.Size(67, 29);
@@ -92,7 +92,7 @@
             this.tbnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbnCancelar.ForeColor = System.Drawing.Color.Green;
             this.tbnCancelar.Location = new System.Drawing.Point(451, 105);
-            this.tbnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.tbnCancelar.Name = "tbnCancelar";
             this.tbnCancelar.Size = new System.Drawing.Size(67, 24);
             this.tbnCancelar.TabIndex = 4;
@@ -103,7 +103,7 @@
             // txtNombreCategoria
             // 
             this.txtNombreCategoria.Location = new System.Drawing.Point(188, 56);
-            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreCategoria.Name = "txtNombreCategoria";
             this.txtNombreCategoria.Size = new System.Drawing.Size(168, 20);
             this.txtNombreCategoria.TabIndex = 5;
@@ -111,7 +111,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(188, 108);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(168, 20);
             this.txtDescripcion.TabIndex = 6;
@@ -132,6 +132,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(-11, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(675, 75);
@@ -146,8 +147,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCategoriaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCategoriaProducto";
