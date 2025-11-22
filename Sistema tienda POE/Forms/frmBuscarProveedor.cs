@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using Sistema_tienda_POE.Clases;
 using System;
 using System.Collections.Generic;
