@@ -22,7 +22,7 @@ namespace Sistema_tienda_POE.Forms
         {
             ConfigurarTabla();
             Limpiar();
-            // Esto ayuda a evitar el error de NullReferenceException en el bucle de registro.
+            // Esto asegura que el DataGrid no tenga una fila vacia extra
             dgvDetalle.AllowUserToAddRows = false;
         }
 
@@ -44,15 +44,17 @@ namespace Sistema_tienda_POE.Forms
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
 
-            frmBuscarProveedor ventana = new frmBuscarProveedor();
-            ventana.ShowDialog();
-
+        frmBuscarProveedor ventana = new frmBuscarProveedor();
+        // Abrimos el formulario de busqueda como dialogo para pausar este formulario
+        if (ventana.ShowDialog() == DialogResult.OK)
+        {
             if (ventana.IdProveedorSeleccionado > 0)
             {
                 idProveedorSeleccionado = ventana.IdProveedorSeleccionado;
                 txtNombreProveedor.Text = ventana.NombreProveedorSeleccionado;
             }
         }
+    }
 
 
         // buscar producto por codigo
