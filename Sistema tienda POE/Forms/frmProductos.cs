@@ -99,10 +99,21 @@ namespace Sistema_tienda_POE.Forms
                     if (result == DialogResult.OK)
                     {
                         CargarCategorias();
+                        var lista = cmbCategoria.DataSource as List<Categoria>;
+                        if (lista != null)
+                        {
+                            var nuevaCat = lista
+                                .Where(c => c.IdCategoria != 0)
+                                .OrderByDescending(c => c.IdCategoria)
+                                .FirstOrDefault();
+
+                            if (nuevaCat != null)
+                            {
+                                cmbCategoria.SelectedValue = nuevaCat.IdCategoria;
+                            }
+                        }
                     }
 
-                    this.cmbCategoria.SelectedIndex = -1;
-                    
                 }
             }
         }

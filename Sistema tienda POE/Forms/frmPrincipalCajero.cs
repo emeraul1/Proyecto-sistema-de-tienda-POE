@@ -16,5 +16,19 @@ namespace Sistema_tienda_POE.Forms
         {
             InitializeComponent();
         }
+
+        private void btnVender_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmReporteVentas())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            var frmCompras = new frmCompra();
+            frmCompras.Show();
+        }
     }
 }

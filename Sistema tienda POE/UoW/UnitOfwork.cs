@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Sistema_tienda_POE.Clases;
 using Sistema_tienda_POE.Repositorios;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace Sistema_tienda_POE.UoW
         public CompraRepository Compra { get; private set; }
         public DetalleCompraRepository DetalleCompra { get; private set; }
 
+        public ReporteVentaRepository ReporteVenta { get; private set; }
+
         public UnitOfwork(string connectionString)
         {
             _connection = new SqlConnection(connectionString);
@@ -37,6 +40,7 @@ namespace Sistema_tienda_POE.UoW
             Cliente = new ClienteRepository(_connection, _transaction);
             MetodoPago = new MetodoPagoRepository(_connection, _transaction);
             Rol = new RolResopitory(_connection, _transaction);
+            ReporteVenta = new ReporteVentaRepository (_connection, _transaction);
 
             Proveedor = new ProveedorRepository(_connection, _transaction);
             Compra = new CompraRepository(_connection, _transaction);

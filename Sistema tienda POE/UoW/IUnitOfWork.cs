@@ -18,6 +18,8 @@ namespace Sistema_tienda_POE.UoW
         ClienteRepository Cliente { get; }
 
         DetalleVentaRepository DetalleVenta { get; }
+
+        ReporteVentaRepository ReporteVenta { get; }
         void Commit();
     }
 }
