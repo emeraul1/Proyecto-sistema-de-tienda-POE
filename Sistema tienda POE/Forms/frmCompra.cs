@@ -1,12 +1,10 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Sistema_tienda_POE.Clases;
 using Sistema_tienda_POE.Repositorios;
 using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Globalization;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
 namespace Sistema_tienda_POE.Forms
 {
     public partial class frmCompra : Form
@@ -24,7 +22,7 @@ namespace Sistema_tienda_POE.Forms
         {
             ConfigurarTabla();
             Limpiar();
-            // Esto asegura que el DataGrid no tenga una fila vacia extra
+            // Esto ayuda a evitar el error de NullReferenceException en el bucle de registro.
             dgvDetalle.AllowUserToAddRows = false;
         }
 
@@ -45,52 +43,27 @@ namespace Sistema_tienda_POE.Forms
         // buscar proveedor
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
+
             frmBuscarProveedor ventana = new frmBuscarProveedor();
-            // Abrimos el formulario de busqueda como dialogo para pausar este formulario
-            if (ventana.ShowDialog() == DialogResult.OK)
+            ventana.ShowDialog();
+
+            if (ventana.IdProveedorSeleccionado > 0)
             {
-                if (ventana.IdProveedorSeleccionado > 0)
-                {
-                    idProveedorSeleccionado = ventana.IdProveedorSeleccionado;
-                    txtNombreProveedor.Text = ventana.NombreProveedorSeleccionado;
-                }
+                idProveedorSeleccionado = ventana.IdProveedorSeleccionado;
+                txtNombreProveedor.Text = ventana.NombreProveedorSeleccionado;
             }
         }
 
-
-        private void txtCodigoBarra_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtCodigoBarra.Text))
-            {
-                LimpiarProducto();
-                return;
-            }
-
-            
-            if (txtCodigoBarra.Text.Length == 5)
-            {
-                BuscarProducto();
-            }
-            // aseguramos que los campos de detalle esten limpios
-            else if (txtCodigoBarra.Text.Length < 5)
-            {
-                LimpiarProducto();
-            }
-        }
 
         // buscar producto por codigo
         private void BuscarProducto()
         {
-           
-            idProductoSeleccionado = 0;
-            nombreProductoSeleccionado = "";
-            txtCostoUnitario.Text = "";
-            txtCantidad.Text = "1";
-            txtCantidad.ReadOnly = false;
+            // Limpiamos la información del producto antes de buscar
+            LimpiarProducto();
 
-            //ValidaciOn de la caja de texto
             if (string.IsNullOrWhiteSpace(txtCodigoBarra.Text))
             {
+                MessageBox.Show("Ingrese un código de barras.");
                 return;
             }
 
@@ -111,75 +84,68 @@ namespace Sistema_tienda_POE.Forms
 
                     if (dr.Read())
                     {
-                        //Asignar valores
+                        // Línea que te da error, revisada y limpia
                         idProductoSeleccionado = (int)dr["IdProducto"];
-                        nombreProductoSeleccionado = dr["Nombre"].ToString();
+                        nombreProductoSeleccionado = dr["Nombre"].ToString(); // ⬅️ AHORA LIMPIA
 
+                        // Formato de costo para decimales
                         decimal costo = (decimal)dr["Costo"];
                         txtCostoUnitario.Text = costo.ToString("N2");
-                        txtCantidad.Focus();
 
-                    txtCantidad.ReadOnly = false; // Habilitar la cantidad
-                        txtCantidad.Focus(); // Mueve el foco a la cantidad para el usuario
+                        txtCantidad.ReadOnly = false;
+                        txtCantidad.Focus();
                     }
                     else
                     {
-                        // Producto no encontrado
-                        MessageBox.Show("Producto no encontrado.", "Búsqueda Fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtCodigoBarra.Text = ""; // Limpiamos el código para que pueda intentar de nuevo
+                        MessageBox.Show("Producto no encontrado.");
                         txtCodigoBarra.Focus();
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al buscar el producto. Detalle: " + ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al buscar el producto: " + ex.Message);
                 }
             }
         }
 
-        // Permitir solo digitos y control en Cantidad
+        // Permitir solo dígitos en Cantidad
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        // Permitir digitos, punto, coma en Costo
+        // Permitir dígitos, punto, coma y control en Costo
         private void txtCostoUnitario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Permite dígitos y teclas de control
+            // Permitir dígitos, la tecla de control (como backspace) y separadores decimales
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != ','))
             {
                 e.Handled = true;
             }
-            // Controla que solo haya un separador decimal
+            // Controlar que solo haya un punto o coma decimal
             if ((e.KeyChar == '.') || (e.KeyChar == ','))
             {
                 string separador = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
 
-                if (((System.Windows.Forms.TextBox)sender).Text.Contains(separador))
+                if (((TextBox)sender).Text.Contains(separador))
                 {
                     e.Handled = true;
                 }
+                // Si el carácter presionado no es el separador actual, también lo bloqueamos si ya existe uno.
                 else if (e.KeyChar.ToString() != separador)
                 {
-                    e.Handled = true; // Bloquea el separador incorrecto si ya existe uno.
+                    e.Handled = true;
                 }
             }
         }
 
-        // agregar producto al detalle
+        // agrega el prodcto al detalle
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (idProveedorSeleccionado == 0)
-            {
-                MessageBox.Show("Debe seleccionar un proveedor primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (idProductoSeleccionado == 0)
             {
-                MessageBox.Show("Debe seleccionar un producto (escriba el código).", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un producto (escriba el código y presione Enter).");
                 return;
             }
 
@@ -190,6 +156,7 @@ namespace Sistema_tienda_POE.Forms
                 return;
             }
 
+            // Intenta parsear el costo de forma segura, usando la cultura actual del sistema
             if (!decimal.TryParse(txtCostoUnitario.Text, NumberStyles.Currency | NumberStyles.Number, CultureInfo.CurrentCulture, out decimal costo) || costo <= 0)
             {
                 MessageBox.Show("Ingrese un costo unitario válido y mayor a cero.");
@@ -206,15 +173,11 @@ namespace Sistema_tienda_POE.Forms
                 nombreProductoSeleccionado,
                 cantidad,
                 costo,
-                subtotal // Se mantienen como decimal para cálculo interno
+                subtotal // Se mantienen como decimal para calculo interno
             );
 
             ActualizarTotal();
-            LimpiarProducto(); // Limpia los campos de detalle
-
-            //Limpiar código de barras para el siguiente producto
-            txtCodigoBarra.Text = "";
-            txtCodigoBarra.Focus();
+            LimpiarProducto(); // Limpia los campos de producto para la siguiente adición
         }
 
         // quitar producto
@@ -244,8 +207,10 @@ namespace Sistema_tienda_POE.Forms
 
             foreach (DataGridViewRow fila in dgvDetalle.Rows)
             {
+                // La verificación de IsNewRow no es necesaria si AllowUserToAddRows = false, pero es una buena práctica
                 if (fila.IsNewRow) continue;
 
+                // Verifica que el valor exista y sea convertible
                 if (fila.Cells["Subtotal"].Value != null)
                 {
                     total += Convert.ToDecimal(fila.Cells["Subtotal"].Value);
@@ -258,23 +223,22 @@ namespace Sistema_tienda_POE.Forms
         {
             idProductoSeleccionado = 0;
             nombreProductoSeleccionado = "";
+            txtCodigoBarra.Text = "";
             txtCostoUnitario.Text = "";
-            txtCantidad.Text = "";
-            txtCantidad.ReadOnly = false;
+            txtCantidad.Text = "1";
+            txtCantidad.ReadOnly = true;
+            txtCodigoBarra.Focus();
         }
+
         private void Limpiar()
         {
-            LimpiarProducto(); // Limpia campos de detalle de producto
+            LimpiarProducto(); // limpia la sección del producto
 
             // limpia la sección del proveedor y detalle
             idProveedorSeleccionado = 0;
             txtNombreProveedor.Text = "";
             dgvDetalle.Rows.Clear();
             lbTextoTotal.Text = "Total: $0.00";
-
-            //limpia código de barras y foco
-            txtCodigoBarra.Text = "";
-            txtCodigoBarra.Focus();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -291,7 +255,8 @@ namespace Sistema_tienda_POE.Forms
                 return;
             }
 
-            if (dgvDetalle.Rows.Count == 0)
+            // Esta validación debe contemplar que la única fila puede ser la vacía de adición
+            if (dgvDetalle.Rows.Count == 0 || (dgvDetalle.Rows.Count == 1 && dgvDetalle.AllowUserToAddRows))
             {
                 MessageBox.Show("Agregue productos al detalle de la compra.");
                 return;
@@ -304,6 +269,7 @@ namespace Sistema_tienda_POE.Forms
 
                 try
                 {
+                  
                     CompraRepository repo = new CompraRepository(conexion, transaccion);
 
                     // Creación del objeto Compra
@@ -320,10 +286,10 @@ namespace Sistema_tienda_POE.Forms
                         Observacion = ""
                     };
 
-                    // Se inserta la cabecera de la compra
+                    // Se inserta la cabecera de la compra.
                     int idCompra = repo.InsertCompra(compra);
 
-                    // Se insertan los detalles y se actualiza el stock
+                    // Se insertan los detalles y se actualiza el stock.
                     foreach (DataGridViewRow fila in dgvDetalle.Rows)
                     {
                         // Ignorar la fila de adición
@@ -342,7 +308,7 @@ namespace Sistema_tienda_POE.Forms
                         repo.ActualizarStock(det.IdProducto, det.Cantidad);
                     }
 
-                    // confirmar la transaccion
+                    // Si todo fue bien, confirmar la transacción.
                     transaccion.Commit();
                     MessageBox.Show("Compra registrada con éxito.");
                     Limpiar();
@@ -356,8 +322,24 @@ namespace Sistema_tienda_POE.Forms
             }
         }
 
-        private void txtNombreProveedor_TextChanged(object sender, EventArgs e) { }
-        private void txtCantidad_TextChanged(object sender, EventArgs e) { }
-        private void txtCostoUnitario_TextChanged(object sender, EventArgs e) { }
+        private void txtCodigoBarra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCostoUnitario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Sistema_tienda_POE.Clases;
 using Sistema_tienda_POE.Repositorios;
 using System;
@@ -9,12 +9,19 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmProveedor : Form
     {
+        // Asumiendo que esta clase existe para manejar la conexión estática
+        // Esto es necesario para inicializar el repositorio
         private readonly ProveedorRepository _repo;
 
         public frmProveedor()
         {
             InitializeComponent();
 
+            // Inicializar el repositorio usando la conexión estática (sin transacciones)
+            // Se debe registrar RepoDB antes de usarlo.
+            // SqlServerBootstrap.Initialize(); // Si no lo has hecho globalmente
+
+            // Usamos una conexión local, ya que no es parte de una transacción mayor (como la compra)
             _repo = new ProveedorRepository(ConexionBD.ObtenerConexion());
         }
 
@@ -24,11 +31,13 @@ namespace Sistema_tienda_POE.Forms
             LimpiarCampos();
         }
 
+        // --- Métodos de Interacción con la BD ---
+
         private void CargarProveedores()
         {
             try
             {
-                // Leer solo los proveedores activos para la vista principal
+                // Leer solo los proveedores activos (Estado = true) para la vista principal
                 dgvProveedores.DataSource = _repo.GetByEstado(true).ToList();
 
                 // Ocultar la columna de ID si no es necesaria para el usuario
@@ -45,16 +54,17 @@ namespace Sistema_tienda_POE.Forms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Validaciones basicas
+            // 1. Validaciones básicas
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNIT.Text))
             {
                 MessageBox.Show("El Nombre y el NIT son obligatorios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            //  Crear objeto Proveedor
+            // 2. Crear objeto Proveedor
             Proveedor p = new Proveedor
             {
+                // Intentamos parsear el ID. Si falla, es un INSERT (ID = 0)
                 IdProveedor = int.TryParse(txtIdProveedor.Text, out int id) ? id : 0,
                 Nombre = txtNombre.Text,
                 NIT = txtNIT.Text,
@@ -95,7 +105,7 @@ namespace Sistema_tienda_POE.Forms
                 {
                     try
                     {
-                        // D (DELETE) 
+                        // D (DELETE) Lógico
                         _repo.EliminarLogico(idProveedor);
                         MessageBox.Show("Proveedor inactivado correctamente.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
@@ -118,15 +128,16 @@ namespace Sistema_tienda_POE.Forms
             LimpiarCampos();
         }
 
+        // --- Lógica de Interfaz ---
 
         private void LimpiarCampos()
         {
-            txtIdProveedor.Text = "0"; 
+            txtIdProveedor.Text = "0"; // Es bueno mantenerlo visible pero no editable para el desarrollador
             txtNombre.Clear();
             txtNIT.Clear();
             txtTelefono.Clear();
             txtDireccion.Clear();
-            chkEstado.Checked = true;
+            chkEstado.Checked = true; // Por defecto, se crea activo
             txtNombre.Focus();
         }
 
@@ -158,6 +169,11 @@ namespace Sistema_tienda_POE.Forms
         {
             LimpiarCampos();
             btnGuardar.Text = "Guardar";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

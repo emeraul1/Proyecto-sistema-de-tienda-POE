@@ -1,4 +1,4 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Sistema_tienda_POE.Clases;
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,7 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmBuscarProveedor : Form
     {
+        // Propiedades públicas para devolver el resultado al formulario padre (frmCompra)
         public int IdProveedorSeleccionado { get; private set; }
         public string NombreProveedorSeleccionado { get; private set; }
 
@@ -29,6 +30,8 @@ namespace Sistema_tienda_POE.Forms
         {
             List<Proveedor> lista = new List<Proveedor>();
 
+            // Nota: Para este nivel, simplificamos el acceso a datos. 
+            // Lo ideal sería usar un Repositorio (RepoDB) aquí también.
             string consulta = "SELECT IdProveedor, Nombre FROM Proveedor";
 
             if (!string.IsNullOrWhiteSpace(filtro))
@@ -69,6 +72,8 @@ namespace Sistema_tienda_POE.Forms
             }
         }
 
+        // --- Eventos de Interacción ---
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             CargarProveedores(txtFiltro.Text);
@@ -101,6 +106,11 @@ namespace Sistema_tienda_POE.Forms
             {
                 btnSeleccionar_Click(sender, e);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
