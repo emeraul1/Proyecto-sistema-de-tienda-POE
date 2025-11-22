@@ -305,7 +305,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(895, 786);
             this.Controls.Add(this.splitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

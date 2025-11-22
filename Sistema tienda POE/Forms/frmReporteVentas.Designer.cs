@@ -42,49 +42,46 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvReporte = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.lbGanacia);
-            this.splitContainer1.Panel1.Controls.Add(this.btnLimpiar);
-            this.splitContainer1.Panel1.Controls.Add(this.btnPDF);
-            this.splitContainer1.Panel1.Controls.Add(this.btnGenerar);
-            this.splitContainer1.Panel1.Controls.Add(this.dtpFin);
-            this.splitContainer1.Panel1.Controls.Add(this.dtpInicio);
-            this.splitContainer1.Panel1.Controls.Add(this.cmbCategoria);
-            this.splitContainer1.Panel1.Controls.Add(this.lbTotal);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
+            this.splitContainer1.Panel1.Controls.Add(this.panel2);
+            this.splitContainer1.Panel1.Controls.Add(this.panel1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvReporte);
-            this.splitContainer1.Size = new System.Drawing.Size(996, 496);
-            this.splitContainer1.SplitterDistance = 272;
+            this.splitContainer1.Size = new System.Drawing.Size(1189, 705);
+            this.splitContainer1.SplitterDistance = 386;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // lbGanacia
             // 
             this.lbGanacia.AutoSize = true;
             this.lbGanacia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGanacia.Location = new System.Drawing.Point(348, 220);
+            this.lbGanacia.Location = new System.Drawing.Point(251, 173);
+            this.lbGanacia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGanacia.Name = "lbGanacia";
-            this.lbGanacia.Size = new System.Drawing.Size(164, 18);
+            this.lbGanacia.Size = new System.Drawing.Size(141, 15);
             this.lbGanacia.TabIndex = 36;
             this.lbGanacia.Text = "Ganacia bruta: $0.00";
             // 
@@ -92,9 +89,10 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(809, 189);
+            this.btnLimpiar.Location = new System.Drawing.Point(597, 148);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(157, 31);
+            this.btnLimpiar.Size = new System.Drawing.Size(118, 25);
             this.btnLimpiar.TabIndex = 35;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -104,9 +102,10 @@
             // 
             this.btnPDF.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDF.Location = new System.Drawing.Point(809, 119);
+            this.btnPDF.Location = new System.Drawing.Point(597, 91);
+            this.btnPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(157, 39);
+            this.btnPDF.Size = new System.Drawing.Size(118, 32);
             this.btnPDF.TabIndex = 34;
             this.btnPDF.Text = "Generar PDF ";
             this.btnPDF.UseVisualStyleBackColor = false;
@@ -116,9 +115,10 @@
             // 
             this.btnGenerar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(809, 62);
+            this.btnGenerar.Location = new System.Drawing.Point(597, 44);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(157, 41);
+            this.btnGenerar.Size = new System.Drawing.Size(118, 33);
             this.btnGenerar.TabIndex = 33;
             this.btnGenerar.Text = "Generar Reporte ";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -127,61 +127,68 @@
             // dtpFin
             // 
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFin.Location = new System.Drawing.Point(494, 113);
+            this.dtpFin.Location = new System.Drawing.Point(360, 86);
+            this.dtpFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(144, 22);
+            this.dtpFin.Size = new System.Drawing.Size(109, 20);
             this.dtpFin.TabIndex = 32;
             // 
             // dtpInicio
             // 
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpInicio.Location = new System.Drawing.Point(284, 113);
+            this.dtpInicio.Location = new System.Drawing.Point(203, 86);
+            this.dtpInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpInicio.Name = "dtpInicio";
-            this.dtpInicio.Size = new System.Drawing.Size(118, 22);
+            this.dtpInicio.Size = new System.Drawing.Size(90, 20);
             this.dtpInicio.TabIndex = 31;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(44, 111);
+            this.cmbCategoria.Location = new System.Drawing.Point(23, 84);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(126, 24);
+            this.cmbCategoria.Size = new System.Drawing.Size(96, 21);
             this.cmbCategoria.TabIndex = 30;
             // 
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(31, 220);
+            this.lbTotal.Location = new System.Drawing.Point(13, 173);
+            this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(176, 18);
+            this.lbTotal.Size = new System.Drawing.Size(150, 15);
             this.lbTotal.TabIndex = 29;
             this.lbTotal.Text = "Total de Ventas: $0.00";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(542, 92);
+            this.label4.Location = new System.Drawing.Point(396, 69);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 16);
+            this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 28;
             this.label4.Text = "fin";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(332, 92);
+            this.label3.Location = new System.Drawing.Point(239, 69);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 16);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 27;
             this.label3.Text = "Inicio";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 92);
+            this.label2.Location = new System.Drawing.Point(13, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 26;
             this.label2.Text = "Filtar por categoria";
             // 
@@ -189,9 +196,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 25);
+            this.label1.Location = new System.Drawing.Point(314, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 32);
+            this.label1.Size = new System.Drawing.Size(213, 26);
             this.label1.TabIndex = 25;
             this.label1.Text = "Reporte de ventas ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -201,29 +209,59 @@
             this.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReporte.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvReporte.Location = new System.Drawing.Point(0, 0);
+            this.dgvReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvReporte.Name = "dgvReporte";
             this.dgvReporte.RowHeadersWidth = 51;
             this.dgvReporte.RowTemplate.Height = 24;
-            this.dgvReporte.Size = new System.Drawing.Size(996, 220);
+            this.dgvReporte.Size = new System.Drawing.Size(1189, 316);
             this.dgvReporte.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbGanacia);
+            this.panel1.Controls.Add(this.btnLimpiar);
+            this.panel1.Controls.Add(this.btnPDF);
+            this.panel1.Controls.Add(this.btnGenerar);
+            this.panel1.Controls.Add(this.dtpFin);
+            this.panel1.Controls.Add(this.dtpInicio);
+            this.panel1.Controls.Add(this.cmbCategoria);
+            this.panel1.Controls.Add(this.lbTotal);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(143, 106);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(916, 277);
+            this.panel1.TabIndex = 37;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
+            this.panel2.Location = new System.Drawing.Point(0, -21);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1204, 108);
+            this.panel2.TabIndex = 38;
             // 
             // frmReporteVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 496);
+            this.ClientSize = new System.Drawing.Size(1189, 705);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmReporteVentas";
-            this.Text = "frmReporteVentas";
+            this.Text = "Reporte Ventas";
             this.Load += new System.EventHandler(this.frmReporteVentas_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -244,5 +282,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvReporte;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
