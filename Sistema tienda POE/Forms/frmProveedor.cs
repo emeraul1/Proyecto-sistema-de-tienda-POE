@@ -159,5 +159,10 @@ namespace Sistema_tienda_POE.Forms
             LimpiarCampos();
             btnGuardar.Text = "Guardar";
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos_AfterUpdate();
+        }
     }
 }

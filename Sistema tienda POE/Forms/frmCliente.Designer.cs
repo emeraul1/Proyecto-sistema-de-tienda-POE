@@ -42,7 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,10 +145,10 @@
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(249, 230);
+            this.btnAgregar.Location = new System.Drawing.Point(81, 245);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(64, 39);
+            this.btnAgregar.Size = new System.Drawing.Size(77, 39);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtDireccion);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.label2);
@@ -168,16 +168,16 @@
             this.panel1.Controls.Add(this.txtApellidos);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtNombres);
-            this.panel1.Location = new System.Drawing.Point(98, 141);
+            this.panel1.Location = new System.Drawing.Point(23, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 286);
+            this.panel1.Size = new System.Drawing.Size(393, 286);
             this.panel1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(247, 89);
+            this.label1.Location = new System.Drawing.Point(182, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 39);
@@ -189,34 +189,35 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
             this.panel2.Location = new System.Drawing.Point(-5, -8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(676, 105);
+            this.panel2.Size = new System.Drawing.Size(676, 69);
             this.panel2.TabIndex = 13;
             // 
-            // btnCancelar
+            // button1
             // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Green;
-            this.btnCancelar.Location = new System.Drawing.Point(69, 230);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(82, 39);
-            this.btnCancelar.TabIndex = 14;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(215, 245);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 39);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(651, 503);
+            this.ClientSize = new System.Drawing.Size(438, 407);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.panel1.ResumeLayout(false);
@@ -241,6 +242,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button button1;
     }
 }

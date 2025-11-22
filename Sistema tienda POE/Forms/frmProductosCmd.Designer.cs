@@ -361,6 +361,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProductosCmd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProductosCmd";
             this.Load += new System.EventHandler(this.frmProductosCmd_Load);
             this.panel1.ResumeLayout(false);

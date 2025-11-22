@@ -311,6 +311,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.tbnCancelar = new System.Windows.Forms.Button();
             this.txtNombreCategoria = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,19 +87,6 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // tbnCancelar
-            // 
-            this.tbnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tbnCancelar.ForeColor = System.Drawing.Color.Green;
-            this.tbnCancelar.Location = new System.Drawing.Point(451, 105);
-            this.tbnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.tbnCancelar.Name = "tbnCancelar";
-            this.tbnCancelar.Size = new System.Drawing.Size(67, 24);
-            this.tbnCancelar.TabIndex = 4;
-            this.tbnCancelar.Text = "Cancelar";
-            this.tbnCancelar.UseVisualStyleBackColor = true;
-            this.tbnCancelar.Click += new System.EventHandler(this.tbnCancelar_Click);
-            // 
             // txtNombreCategoria
             // 
             this.txtNombreCategoria.Location = new System.Drawing.Point(188, 56);
@@ -118,12 +105,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtDescripcion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtNombreCategoria);
             this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.tbnCancelar);
             this.panel1.Location = new System.Drawing.Point(36, 105);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(545, 197);
@@ -138,6 +125,19 @@
             this.panel2.Size = new System.Drawing.Size(675, 75);
             this.panel2.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(451, 99);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 29);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmCategoriaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +150,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCategoriaProducto";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCategoriaProducto";
             this.Load += new System.EventHandler(this.frmCategoriaProducto_Load);
             this.panel1.ResumeLayout(false);
@@ -166,10 +166,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button tbnCancelar;
         private System.Windows.Forms.TextBox txtNombreCategoria;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }

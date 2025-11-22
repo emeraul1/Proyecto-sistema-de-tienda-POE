@@ -359,5 +359,10 @@ namespace Sistema_tienda_POE.Forms
         private void txtNombreProveedor_TextChanged(object sender, EventArgs e) { }
         private void txtCantidad_TextChanged(object sender, EventArgs e) { }
         private void txtCostoUnitario_TextChanged(object sender, EventArgs e) { }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

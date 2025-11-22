@@ -25,7 +25,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbInfo = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -34,15 +34,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 28);
+            this.label1.Location = new System.Drawing.Point(24, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(79, 30);
+            this.txtFiltro.Location = new System.Drawing.Point(79, 37);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(250, 20);
             this.txtFiltro.TabIndex = 1;
@@ -66,7 +67,7 @@
             this.dgvProveedores.AllowUserToDeleteRows = false;
             this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(30, 68);
+            this.dgvProveedores.Location = new System.Drawing.Point(28, 88);
             this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
@@ -80,7 +81,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSeleccionar.Location = new System.Drawing.Point(153, 333);
+            this.btnSeleccionar.Location = new System.Drawing.Point(62, 363);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(130, 46);
             this.btnSeleccionar.TabIndex = 4;
@@ -90,6 +91,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.txtFiltro);
@@ -118,15 +120,18 @@
             this.lbInfo.TabIndex = 7;
             this.lbInfo.Text = "Buscar Proveedor";
             // 
-            // btnCancelar
+            // button1
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(407, 75);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(250, 363);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 46);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmBuscarProveedor
             // 
@@ -134,7 +139,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(564, 577);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -163,6 +167,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button button1;
     }
 }
