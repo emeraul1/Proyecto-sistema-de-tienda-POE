@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using Sistema_tienda_POE.Clases;
 using Sistema_tienda_POE.Repositorios;
 using System;
@@ -9,7 +9,6 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmProveedor : Form
     {
-
         private readonly ProveedorRepository _repo;
 
         public frmProveedor()
@@ -29,8 +28,10 @@ namespace Sistema_tienda_POE.Forms
         {
             try
             {
+                // Leer solo los proveedores activos para la vista principal
                 dgvProveedores.DataSource = _repo.GetByEstado(true).ToList();
 
+                // Ocultar la columna de ID si no es necesaria para el usuario
                 if (dgvProveedores.Columns.Contains("IdProveedor"))
                 {
                     dgvProveedores.Columns["IdProveedor"].Visible = false;
@@ -44,17 +45,16 @@ namespace Sistema_tienda_POE.Forms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //  Validaciones basicas
+            // Validaciones basicas
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNIT.Text))
             {
                 MessageBox.Show("El Nombre y el NIT son obligatorios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Crear objeto Proveedor
+            // 2. Crear objeto Proveedor
             Proveedor p = new Proveedor
             {
-                // Intentamos parsear el ID
                 IdProveedor = int.TryParse(txtIdProveedor.Text, out int id) ? id : 0,
                 Nombre = txtNombre.Text,
                 NIT = txtNIT.Text,
@@ -95,7 +95,7 @@ namespace Sistema_tienda_POE.Forms
                 {
                     try
                     {
-                        // D (DELETE) Lógico
+                        // D (DELETE) 
                         _repo.EliminarLogico(idProveedor);
                         MessageBox.Show("Proveedor inactivado correctamente.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
@@ -143,7 +143,7 @@ namespace Sistema_tienda_POE.Forms
                 txtTelefono.Text = fila.Cells["Telefono"].Value?.ToString();
                 txtDireccion.Text = fila.Cells["Direccion"].Value?.ToString();
 
-                // mapear el valor bool 'Estado' del DGV al CheckBox
+                // Mapear el valor bool 'Estado' del DGV al CheckBox
                 if (fila.Cells["Estado"].Value != null)
                 {
                     chkEstado.Checked = (bool)fila.Cells["Estado"].Value;
@@ -158,11 +158,6 @@ namespace Sistema_tienda_POE.Forms
         {
             LimpiarCampos();
             btnGuardar.Text = "Guardar";
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
