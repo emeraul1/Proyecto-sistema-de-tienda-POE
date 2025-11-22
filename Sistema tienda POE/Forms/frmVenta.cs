@@ -276,11 +276,25 @@ namespace Sistema_tienda_POE.Forms
             }
 
             decimal total = decimal.Parse(lbTotal.Text.Replace("Total: $", ""));
+
+            if (total > 2000)
+            {
+                if (string.IsNullOrWhiteSpace(txtDUI.Text.Trim()))
+                {
+                    MessageBox.Show(
+                       "Para ventas mayores a $2000 es obligatorio ingresar el DUI del cliente.",
+                       "DUI Requerido",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning
+           );
+                    return;
+                }
+            }
             if (confirmar == DialogResult.Yes)
             {
                 var venta = new Venta
                 {
-                    IdCliente = cliente.IdCliente,
+                    IdCliente = cliente?.IdCliente,
                     FechaHora = DateTime.Now,
                     Total = total,
                     Subtotal = total,

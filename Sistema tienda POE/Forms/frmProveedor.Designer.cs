@@ -45,8 +45,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbInfo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,7 +58,7 @@
             this.dgvProveedores.AllowUserToDeleteRows = false;
             this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(44, 544);
+            this.dgvProveedores.Location = new System.Drawing.Point(12, 544);
             this.dgvProveedores.MultiSelect = false;
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
@@ -75,7 +75,7 @@
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 19);
+            this.label1.Size = new System.Drawing.Size(65, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
@@ -83,14 +83,14 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(82, 6);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(337, 26);
+            this.txtNombre.Size = new System.Drawing.Size(337, 30);
             this.txtNombre.TabIndex = 0;
             // 
             // txtNIT
             // 
             this.txtNIT.Location = new System.Drawing.Point(82, 54);
             this.txtNIT.Name = "txtNIT";
-            this.txtNIT.Size = new System.Drawing.Size(169, 26);
+            this.txtNIT.Size = new System.Drawing.Size(169, 30);
             this.txtNIT.TabIndex = 1;
             // 
             // label2
@@ -99,7 +99,7 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 19);
+            this.label2.Size = new System.Drawing.Size(33, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "NIT:";
             // 
@@ -107,7 +107,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(82, 102);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(169, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(169, 30);
             this.txtTelefono.TabIndex = 2;
             // 
             // label3
@@ -116,7 +116,7 @@
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(15, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 19);
+            this.label3.Size = new System.Drawing.Size(69, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Teléfono:";
             // 
@@ -124,7 +124,7 @@
             // 
             this.txtDireccion.Location = new System.Drawing.Point(82, 148);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(337, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(337, 30);
             this.txtDireccion.TabIndex = 3;
             // 
             // label4
@@ -133,7 +133,7 @@
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(15, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.Size = new System.Drawing.Size(76, 24);
             this.label4.TabIndex = 7;
             this.label4.Text = "Dirección:";
             // 
@@ -144,7 +144,7 @@
             this.chkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkEstado.Location = new System.Drawing.Point(494, 9);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(71, 24);
+            this.chkEstado.Size = new System.Drawing.Size(88, 29);
             this.chkEstado.TabIndex = 4;
             this.chkEstado.Text = "Activo";
             this.chkEstado.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             // 
             this.txtIdProveedor.Location = new System.Drawing.Point(426, 6);
             this.txtIdProveedor.Name = "txtIdProveedor";
-            this.txtIdProveedor.Size = new System.Drawing.Size(60, 26);
+            this.txtIdProveedor.Size = new System.Drawing.Size(60, 30);
             this.txtIdProveedor.TabIndex = 12;
             this.txtIdProveedor.Text = "0";
             this.txtIdProveedor.Visible = false;
@@ -205,7 +205,7 @@
             this.lbInfo.Location = new System.Drawing.Point(369, 0);
             this.lbInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(265, 39);
+            this.lbInfo.Size = new System.Drawing.Size(332, 48);
             this.lbInfo.TabIndex = 13;
             this.lbInfo.Text = "Gestion de Proveedores";
             // 
@@ -231,14 +231,6 @@
             this.panel2.Size = new System.Drawing.Size(982, 306);
             this.panel2.TabIndex = 13;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
-            this.panel3.Location = new System.Drawing.Point(-24, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1183, 125);
-            this.panel3.TabIndex = 14;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(494, 115);
@@ -249,9 +241,17 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
+            this.panel3.Location = new System.Drawing.Point(-24, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1183, 125);
+            this.panel3.TabIndex = 14;
+            // 
             // frmProveedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1142, 997);

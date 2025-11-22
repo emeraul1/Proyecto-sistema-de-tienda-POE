@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_tienda_POE.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmPrincipalCajero : Form
     {
+        private readonly string _connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString;
         public frmPrincipalCajero()
         {
             InitializeComponent();
@@ -19,16 +21,19 @@ namespace Sistema_tienda_POE.Forms
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            using (var frm = new frmReporteVentas())
-            {
-                frm.ShowDialog();
-            }
+            var frm = new frmVenta(_connectionString, GlobalUsuario.UsuarioActual.IdUsuario);
+            frm.Show();
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
             var frmCompras = new frmCompra();
             frmCompras.Show();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

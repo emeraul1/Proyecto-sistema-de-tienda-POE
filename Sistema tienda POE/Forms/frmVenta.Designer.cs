@@ -116,15 +116,15 @@
             this.panel1.Controls.Add(this.txtObservacion);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(124, 140);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(996, 331);
             this.panel1.TabIndex = 20;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(399, 250);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(398, 237);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 46);
             this.btnCancelar.TabIndex = 20;
@@ -136,7 +136,7 @@
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnAgregar.Location = new System.Drawing.Point(239, 252);
+            this.btnAgregar.Location = new System.Drawing.Point(238, 239);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(113, 43);
@@ -212,7 +212,7 @@
             // 
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.ForeColor = System.Drawing.Color.Green;
-            this.btnVender.Location = new System.Drawing.Point(707, 250);
+            this.btnVender.Location = new System.Drawing.Point(706, 237);
             this.btnVender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(120, 44);
@@ -235,7 +235,7 @@
             // 
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnQuitar.Location = new System.Drawing.Point(37, 252);
+            this.btnQuitar.Location = new System.Drawing.Point(36, 239);
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(113, 43);
@@ -327,7 +327,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
             this.panel3.Location = new System.Drawing.Point(-29, -22);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1368, 143);
             this.panel3.TabIndex = 21;
@@ -336,7 +336,7 @@
             // 
             this.panel2.Controls.Add(this.dgvVenta);
             this.panel2.Location = new System.Drawing.Point(51, 15);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1165, 447);
             this.panel2.TabIndex = 1;

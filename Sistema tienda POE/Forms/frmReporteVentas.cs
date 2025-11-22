@@ -19,7 +19,7 @@ namespace Sistema_tienda_POE.Forms
 {
     public partial class frmReporteVentas : Form
     {
-        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["Miconexion"].ConnectionString;
+        private readonly string _connectionString = ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString;
         public frmReporteVentas()
         {
             InitializeComponent();

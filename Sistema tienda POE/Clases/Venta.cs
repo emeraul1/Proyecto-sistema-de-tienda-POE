@@ -9,7 +9,7 @@ namespace Sistema_tienda_POE.Clases
     public class Venta
     {
         public int IdVenta { get; set; }
-        public int IdCliente { get; set; }
+        public int? IdCliente { get; set; }
         public int IdUsuario { get; set; }
         public DateTime FechaHora { get; set; }
         public decimal Subtotal { get; set; }
