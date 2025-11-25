@@ -445,5 +445,11 @@ namespace Sistema_tienda_POE.Forms
         {
 
         }
+
+        private void btnCancelar_Click_2(object sender, EventArgs e)
+        {
+
+            this.Close();
+        }
     }
 }

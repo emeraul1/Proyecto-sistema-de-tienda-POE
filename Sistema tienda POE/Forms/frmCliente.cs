@@ -58,5 +58,10 @@ namespace Sistema_tienda_POE.Forms
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

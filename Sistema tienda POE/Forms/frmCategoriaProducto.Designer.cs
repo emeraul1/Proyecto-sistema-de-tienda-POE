@@ -35,8 +35,8 @@
             this.txtNombreCategoria = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,15 +116,6 @@
             this.panel1.Size = new System.Drawing.Size(545, 197);
             this.panel1.TabIndex = 7;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
-            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(-11, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(675, 75);
-            this.panel2.TabIndex = 8;
-            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,6 +128,16 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.Location = new System.Drawing.Point(-11, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(675, 75);
+            this.panel2.TabIndex = 8;
             // 
             // frmCategoriaProducto
             // 

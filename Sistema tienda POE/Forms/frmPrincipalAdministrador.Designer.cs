@@ -48,13 +48,13 @@
             // 
             // btnCerarSesion
             // 
-            this.btnCerarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCerarSesion.BackColor = System.Drawing.Color.White;
             this.btnCerarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCerarSesion.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCerarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerarSesion.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnCerarSesion.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnCerarSesion.Location = new System.Drawing.Point(24, 496);
-            this.btnCerarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerarSesion.Name = "btnCerarSesion";
             this.btnCerarSesion.Size = new System.Drawing.Size(167, 34);
             this.btnCerarSesion.TabIndex = 0;
@@ -69,7 +69,7 @@
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Green;
             this.btnUsuarios.Location = new System.Drawing.Point(468, 87);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(159, 39);
             this.btnUsuarios.TabIndex = 1;
@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(972, 563);
             this.panel1.TabIndex = 3;
@@ -121,7 +121,7 @@
             this.btnReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteVentas.ForeColor = System.Drawing.Color.Green;
             this.btnReporteVentas.Location = new System.Drawing.Point(116, 240);
-            this.btnReporteVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporteVentas.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporteVentas.Name = "btnReporteVentas";
             this.btnReporteVentas.Size = new System.Drawing.Size(159, 45);
             this.btnReporteVentas.TabIndex = 9;
@@ -136,7 +136,7 @@
             this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedores.ForeColor = System.Drawing.Color.Green;
             this.btnProveedores.Location = new System.Drawing.Point(468, 240);
-            this.btnProveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(2);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(159, 45);
             this.btnProveedores.TabIndex = 8;
@@ -151,7 +151,7 @@
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.Green;
             this.btnCompras.Location = new System.Drawing.Point(468, 164);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(159, 39);
             this.btnCompras.TabIndex = 7;
@@ -166,7 +166,7 @@
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.ForeColor = System.Drawing.Color.Green;
             this.btnVender.Location = new System.Drawing.Point(116, 164);
-            this.btnVender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVender.Margin = new System.Windows.Forms.Padding(2);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(159, 39);
             this.btnVender.TabIndex = 6;
@@ -181,7 +181,7 @@
             this.tbnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbnProductos.ForeColor = System.Drawing.Color.Green;
             this.tbnProductos.Location = new System.Drawing.Point(116, 87);
-            this.tbnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.tbnProductos.Name = "tbnProductos";
             this.tbnProductos.Size = new System.Drawing.Size(159, 39);
             this.tbnProductos.TabIndex = 5;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipalAdministrador";

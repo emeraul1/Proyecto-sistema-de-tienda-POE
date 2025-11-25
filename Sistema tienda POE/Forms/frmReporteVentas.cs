@@ -386,5 +386,10 @@ namespace Sistema_tienda_POE.Forms
             lbTotal.Text = "Total Ventas: $0.00";
             lbGanacia.Text = "Ganancia Bruta: $0.00";
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

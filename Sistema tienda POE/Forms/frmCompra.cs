@@ -362,7 +362,7 @@ namespace Sistema_tienda_POE.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

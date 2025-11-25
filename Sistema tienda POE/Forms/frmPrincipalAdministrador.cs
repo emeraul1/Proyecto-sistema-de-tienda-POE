@@ -50,8 +50,24 @@ namespace Sistema_tienda_POE.Forms
         }
 
         private void btnCerarSesion_Click(object sender, EventArgs e)
+        
         {
-            this.Close();
+        
+            // 1. Preguntar confirmación
+            if (MessageBox.Show("¿Está seguro que desea cerrar la sesión?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // 2. Detener el formulario principal
+                this.Close();
+
+                // 3. Reiniciar la aplicación desde el principio (volverá a ejecutar Program.Main())
+                Application.Restart();
+            
+        }
+            
+
+
+
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
