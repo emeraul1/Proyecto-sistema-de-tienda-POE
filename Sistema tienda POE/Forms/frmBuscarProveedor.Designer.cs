@@ -23,9 +23,9 @@
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbInfo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,20 @@
             this.panel1.Size = new System.Drawing.Size(448, 441);
             this.panel1.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(250, 363);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 46);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
@@ -119,19 +133,6 @@
             this.lbInfo.Size = new System.Drawing.Size(203, 39);
             this.lbInfo.TabIndex = 7;
             this.lbInfo.Text = "Buscar Proveedor";
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(250, 363);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 46);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmBuscarProveedor
             // 

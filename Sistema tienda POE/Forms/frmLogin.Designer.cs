@@ -80,7 +80,7 @@
             // 
             this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUsuario.Location = new System.Drawing.Point(271, 108);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(203, 31);
             this.txtNombreUsuario.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(271, 183);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(203, 31);
             this.txtContraseña.TabIndex = 4;
@@ -98,11 +98,11 @@
             // 
             this.btnIngresar.FlatAppearance.BorderSize = 0;
             this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(186)))), ((int)(((byte)(155)))));
             this.btnIngresar.Location = new System.Drawing.Point(368, 261);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(106, 30);
             this.btnIngresar.TabIndex = 5;
@@ -114,11 +114,11 @@
             // 
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(186)))), ((int)(((byte)(155)))));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
             this.btnCancelar.Location = new System.Drawing.Point(125, 263);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 28);
             this.btnCancelar.TabIndex = 6;
@@ -169,7 +169,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

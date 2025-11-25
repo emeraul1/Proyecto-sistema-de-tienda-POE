@@ -3,6 +3,9 @@ using Sistema_tienda_POE.Clases;
 using Sistema_tienda_POE.Repositorios;
 using System;
 using System.Collections.Generic;
+using Microsoft.Data.SqlClient;
+
+
 
 namespace Sistema_tienda_POE.UoW
 {

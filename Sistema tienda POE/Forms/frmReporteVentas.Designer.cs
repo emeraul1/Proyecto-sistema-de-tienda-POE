@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvReporte = new System.Windows.Forms.DataGridView();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.lbGanacia);
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.btnPDF);
@@ -243,6 +245,18 @@
             this.dgvReporte.Size = new System.Drawing.Size(1189, 316);
             this.dgvReporte.TabIndex = 0;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Location = new System.Drawing.Point(597, 188);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(118, 33);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,5 +299,6 @@
         private System.Windows.Forms.DataGridView dgvReporte;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

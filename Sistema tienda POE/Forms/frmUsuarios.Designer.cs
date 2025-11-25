@@ -105,7 +105,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Green;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
             this.btnCancelar.Location = new System.Drawing.Point(399, 128);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(96, 37);
@@ -128,7 +128,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.Teal;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Green;
             this.btnLimpiar.Location = new System.Drawing.Point(389, 209);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -223,7 +223,7 @@
             // 
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.Teal;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Green;
             this.btnAgregar.Location = new System.Drawing.Point(399, 22);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
@@ -246,7 +246,7 @@
             // 
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRemover.ForeColor = System.Drawing.Color.Green;
             this.btnRemover.Location = new System.Drawing.Point(399, 74);
             this.btnRemover.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemover.Name = "btnRemover";

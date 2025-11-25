@@ -30,36 +30,36 @@
         {
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgvVenta = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtDUI = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDineroCliente = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lbTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnVender = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtDUI = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtDineroCliente = new System.Windows.Forms.TextBox();
-            this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
-            this.txtObservacion = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvVenta = new System.Windows.Forms.DataGridView();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitter1
@@ -91,9 +91,156 @@
             // 
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(950, 768);
-            this.splitContainer1.SplitterDistance = 740;
+            this.splitContainer1.SplitterDistance = 739;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // dgvVenta
+            // 
+            this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVenta.Location = new System.Drawing.Point(56, 413);
+            this.dgvVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvVenta.Name = "dgvVenta";
+            this.dgvVenta.RowHeadersWidth = 51;
+            this.dgvVenta.RowTemplate.Height = 24;
+            this.dgvVenta.Size = new System.Drawing.Size(856, 344);
+            this.dgvVenta.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btnVender);
+            this.panel4.Controls.Add(this.btnCancelar);
+            this.panel4.Controls.Add(this.txtDUI);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.txtDineroCliente);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.cmbMetodoPago);
+            this.panel4.Controls.Add(this.txtObservacion);
+            this.panel4.Controls.Add(this.btnBuscar);
+            this.panel4.Location = new System.Drawing.Point(481, 114);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(431, 269);
+            this.panel4.TabIndex = 21;
+            // 
+            // btnVender
+            // 
+            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVender.ForeColor = System.Drawing.Color.Green;
+            this.btnVender.Location = new System.Drawing.Point(300, 210);
+            this.btnVender.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(90, 36);
+            this.btnVender.TabIndex = 16;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Location = new System.Drawing.Point(143, 210);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(84, 36);
+            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_2);
+            // 
+            // txtDUI
+            // 
+            this.txtDUI.Location = new System.Drawing.Point(159, 111);
+            this.txtDUI.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(135, 20);
+            this.txtDUI.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(36, 80);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Dinero cliente:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(36, 114);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 25);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "DUI Cliente";
+            // 
+            // txtDineroCliente
+            // 
+            this.txtDineroCliente.Location = new System.Drawing.Point(159, 80);
+            this.txtDineroCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDineroCliente.Name = "txtDineroCliente";
+            this.txtDineroCliente.Size = new System.Drawing.Size(135, 20);
+            this.txtDineroCliente.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 43);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Metodo pago:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(36, 149);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 25);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Observacion:";
+            // 
+            // cmbMetodoPago
+            // 
+            this.cmbMetodoPago.FormattingEnabled = true;
+            this.cmbMetodoPago.Location = new System.Drawing.Point(159, 47);
+            this.cmbMetodoPago.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbMetodoPago.Name = "cmbMetodoPago";
+            this.cmbMetodoPago.Size = new System.Drawing.Size(135, 21);
+            this.cmbMetodoPago.TabIndex = 9;
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Location = new System.Drawing.Point(159, 147);
+            this.txtObservacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(135, 20);
+            this.txtObservacion.TabIndex = 11;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Green;
+            this.btnBuscar.Location = new System.Drawing.Point(320, 103);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(84, 35);
+            this.btnBuscar.TabIndex = 17;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel1
             // 
@@ -169,54 +316,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Cantidad:";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.Green;
-            this.btnBuscar.Location = new System.Drawing.Point(320, 103);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(84, 35);
-            this.btnBuscar.TabIndex = 17;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 43);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Metodo pago:";
-            // 
-            // btnVender
-            // 
-            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVender.ForeColor = System.Drawing.Color.Green;
-            this.btnVender.Location = new System.Drawing.Point(300, 210);
-            this.btnVender.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(90, 36);
-            this.btnVender.TabIndex = 16;
-            this.btnVender.Text = "Vender";
-            this.btnVender.UseVisualStyleBackColor = true;
-            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 80);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Dinero cliente:";
-            // 
             // btnQuitar
             // 
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -238,14 +337,6 @@
             this.txtCodigo.Size = new System.Drawing.Size(140, 20);
             this.txtCodigo.TabIndex = 5;
             // 
-            // txtDUI
-            // 
-            this.txtDUI.Location = new System.Drawing.Point(159, 111);
-            this.txtDUI.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(135, 20);
-            this.txtDUI.TabIndex = 14;
-            // 
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(195, 93);
@@ -253,53 +344,6 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(140, 20);
             this.txtCantidad.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 114);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 25);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "DUI Cliente";
-            // 
-            // txtDineroCliente
-            // 
-            this.txtDineroCliente.Location = new System.Drawing.Point(159, 80);
-            this.txtDineroCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDineroCliente.Name = "txtDineroCliente";
-            this.txtDineroCliente.Size = new System.Drawing.Size(135, 20);
-            this.txtDineroCliente.TabIndex = 8;
-            // 
-            // cmbMetodoPago
-            // 
-            this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Location = new System.Drawing.Point(159, 47);
-            this.cmbMetodoPago.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbMetodoPago.Name = "cmbMetodoPago";
-            this.cmbMetodoPago.Size = new System.Drawing.Size(135, 21);
-            this.cmbMetodoPago.TabIndex = 9;
-            // 
-            // txtObservacion
-            // 
-            this.txtObservacion.Location = new System.Drawing.Point(159, 147);
-            this.txtObservacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(135, 20);
-            this.txtObservacion.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 149);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 25);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Observacion:";
             // 
             // label1
             // 
@@ -321,49 +365,6 @@
             this.panel3.Size = new System.Drawing.Size(1026, 94);
             this.panel3.TabIndex = 21;
             // 
-            // dgvVenta
-            // 
-            this.dgvVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVenta.Location = new System.Drawing.Point(56, 413);
-            this.dgvVenta.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvVenta.Name = "dgvVenta";
-            this.dgvVenta.RowHeadersWidth = 51;
-            this.dgvVenta.RowTemplate.Height = 24;
-            this.dgvVenta.Size = new System.Drawing.Size(856, 344);
-            this.dgvVenta.TabIndex = 0;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
-            this.btnCancelar.Location = new System.Drawing.Point(143, 210);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 36);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnVender);
-            this.panel4.Controls.Add(this.btnCancelar);
-            this.panel4.Controls.Add(this.txtDUI);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.txtDineroCliente);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.cmbMetodoPago);
-            this.panel4.Controls.Add(this.txtObservacion);
-            this.panel4.Controls.Add(this.btnBuscar);
-            this.panel4.Location = new System.Drawing.Point(481, 114);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(431, 269);
-            this.panel4.TabIndex = 21;
-            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,11 +383,11 @@
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
