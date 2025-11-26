@@ -33,17 +33,20 @@
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bntClientes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bntClientes);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.btnCompras);
             this.panel1.Controls.Add(this.btnVender);
-            this.panel1.Location = new System.Drawing.Point(25, 121);
+            this.panel1.Location = new System.Drawing.Point(33, 149);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(505, 397);
+            this.panel1.Size = new System.Drawing.Size(673, 489);
             this.panel1.TabIndex = 0;
             // 
             // btnCerrar
@@ -52,10 +55,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.Red;
-            this.btnCerrar.Location = new System.Drawing.Point(10, 353);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Location = new System.Drawing.Point(13, 434);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(118, 34);
+            this.btnCerrar.Size = new System.Drawing.Size(157, 42);
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar Sesión";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -67,10 +70,10 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.Green;
-            this.btnCompras.Location = new System.Drawing.Point(172, 193);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCompras.Location = new System.Drawing.Point(229, 194);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(183, 76);
+            this.btnCompras.Size = new System.Drawing.Size(244, 94);
             this.btnCompras.TabIndex = 9;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
@@ -82,10 +85,10 @@
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.ForeColor = System.Drawing.Color.Green;
-            this.btnVender.Location = new System.Drawing.Point(172, 61);
-            this.btnVender.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVender.Location = new System.Drawing.Point(229, 61);
+            this.btnVender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(183, 71);
+            this.btnVender.Size = new System.Drawing.Size(244, 87);
             this.btnVender.TabIndex = 8;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
@@ -94,21 +97,37 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
-            this.panel2.Location = new System.Drawing.Point(-9, -6);
+            this.panel2.Location = new System.Drawing.Point(-12, -7);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 81);
+            this.panel2.Size = new System.Drawing.Size(783, 100);
             this.panel2.TabIndex = 1;
+            // 
+            // bntClientes
+            // 
+            this.bntClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntClientes.ForeColor = System.Drawing.Color.Green;
+            this.bntClientes.Location = new System.Drawing.Point(229, 333);
+            this.bntClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.bntClientes.Name = "bntClientes";
+            this.bntClientes.Size = new System.Drawing.Size(244, 70);
+            this.bntClientes.TabIndex = 11;
+            this.bntClientes.Text = "Cliente";
+            this.bntClientes.UseVisualStyleBackColor = true;
+            this.bntClientes.Click += new System.EventHandler(this.bntClientes_Click);
             // 
             // frmPrincipalCajero
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(572, 557);
+            this.ClientSize = new System.Drawing.Size(763, 686);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPrincipalCajero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sesión Cajero";
@@ -124,5 +143,6 @@
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button bntClientes;
     }
 }
