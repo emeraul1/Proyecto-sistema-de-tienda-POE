@@ -1,4 +1,6 @@
-﻿namespace Sistema_tienda_POE.Forms
+﻿using System.Windows.Forms;
+
+namespace Sistema_tienda_POE.Forms
 {
     partial class frmBuscarProveedor
     {
@@ -74,6 +76,7 @@
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(380, 250);
             this.dgvProveedores.TabIndex = 3;
+            this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             this.dgvProveedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellDoubleClick);
             // 
             // btnSeleccionar
@@ -169,5 +172,6 @@
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private DataGridViewCellEventHandler dgvProveedores_CellContentClick;
     }
 }

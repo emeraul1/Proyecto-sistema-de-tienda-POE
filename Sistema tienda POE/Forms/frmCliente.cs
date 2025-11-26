@@ -21,11 +21,37 @@ namespace Sistema_tienda_POE.Forms
             _connectionString = connectionString;
         }
 
+       
+
         private void frmCliente_Load(object sender, EventArgs e)
         {
-
+            cargarCliente();
         }
 
+        private void cargarCliente()
+        {
+            // Aquí puedes cargar datos iniciales si es necesario
+            using (var uow = new UnitOfwork(_connectionString))
+            {
+                var clientes = uow.Cliente.GetAll();
+                // Si necesitas mostrar los clientes en algún control, puedes hacerlo aquí
+                dgvCliente.DataSource = clientes;
+                dgvCliente.Columns["IdCliente"].Visible = false;
+                //nombre 
+                dgvCliente.Columns["Nombres"].HeaderText = "Nombres";
+                //apellido
+                dgvCliente.Columns["Apellidos"].HeaderText = "Apellidos";
+                //dui
+                dgvCliente.Columns["DUI"].HeaderText = "DUI";
+                //telefono
+                dgvCliente.Columns["Telefono"].HeaderText = "Teléfono";
+                //direccion
+                dgvCliente.Columns["Direccion"].HeaderText = "Dirección";
+                //estado
+                dgvCliente.Columns["Estado"].HeaderText = "Estado";
+                dgvCliente.Refresh();
+            }
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(txtNombres.Text) || string.IsNullOrEmpty(txtApellidos.Text) || string.IsNullOrEmpty(txtTelefono.Text) ||

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using RepoDb;
 using Microsoft.Data.SqlClient;
 using Sistema_tienda_POE.Forms;
+using System.Web;
 
 namespace Sistema_tienda_POE
 {
@@ -37,6 +38,7 @@ namespace Sistema_tienda_POE
             else if (result == DialogResult.Yes)
             {
                 Application.Run(new frmPrincipalCajero());
+
             }
         }
     }

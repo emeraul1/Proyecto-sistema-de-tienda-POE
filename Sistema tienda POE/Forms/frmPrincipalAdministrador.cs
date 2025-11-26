@@ -100,5 +100,13 @@ namespace Sistema_tienda_POE.Forms
                 frm.ShowDialog();
             }
         }
+
+        private void bntClientes_Click(object sender, EventArgs e)
+        {
+
+            frmCliente frmCliente1 = new frmCliente(_connectionString);
+            var frmCliente = frmCliente1;
+            frmCliente.Show();
+        }
     }
 }

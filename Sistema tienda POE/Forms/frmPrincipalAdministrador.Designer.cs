@@ -40,6 +40,7 @@
             this.tbnProductos = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bntClientes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.bntClientes);
             this.panel2.Controls.Add(this.btnReporteVentas);
             this.panel2.Controls.Add(this.btnProveedores);
             this.panel2.Controls.Add(this.btnCompras);
@@ -210,6 +212,18 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // bntClientes
+            // 
+            this.bntClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntClientes.ForeColor = System.Drawing.Color.Green;
+            this.bntClientes.Location = new System.Drawing.Point(116, 314);
+            this.bntClientes.Name = "bntClientes";
+            this.bntClientes.Size = new System.Drawing.Size(159, 42);
+            this.bntClientes.TabIndex = 10;
+            this.bntClientes.Text = "Cliente";
+            this.bntClientes.UseVisualStyleBackColor = true;
+            this.bntClientes.Click += new System.EventHandler(this.bntClientes_Click);
+            // 
             // frmPrincipalAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,5 +262,6 @@
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Button btnReporteVentas;
+        private System.Windows.Forms.Button bntClientes;
     }
 }

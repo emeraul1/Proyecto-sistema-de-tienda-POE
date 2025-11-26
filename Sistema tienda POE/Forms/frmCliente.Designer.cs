@@ -43,7 +43,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -170,7 +172,7 @@
             this.panel1.Controls.Add(this.txtNombres);
             this.panel1.Location = new System.Drawing.Point(23, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 286);
+            this.panel1.Size = new System.Drawing.Size(393, 315);
             this.panel1.TabIndex = 12;
             // 
             // button1
@@ -203,15 +205,24 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(45)))), ((int)(((byte)(11)))));
             this.panel2.Location = new System.Drawing.Point(-5, -8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(676, 69);
+            this.panel2.Size = new System.Drawing.Size(960, 69);
             this.panel2.TabIndex = 13;
+            // 
+            // dgvCliente
+            // 
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Location = new System.Drawing.Point(441, 94);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.Size = new System.Drawing.Size(471, 315);
+            this.dgvCliente.TabIndex = 14;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(438, 407);
+            this.ClientSize = new System.Drawing.Size(924, 439);
+            this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -223,6 +234,7 @@
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +256,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvCliente;
     }
 }
