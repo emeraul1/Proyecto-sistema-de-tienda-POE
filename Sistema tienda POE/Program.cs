@@ -17,21 +17,24 @@ namespace Sistema_tienda_POE
         [STAThread]
         static void Main()
         {
-            //SqlServerBootstrap.Initialize();
+            SqlServerBootstrap.Initialize(); // habilitador de RepoDB para SQL Server 
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin login = new frmLogin();
+            //frmUsuarios login = new frmUsuarios();
 
+
+            // Mostrar el formulario de login como un cuadro de diálogo modal
+            DialogResult result = login.ShowDialog();
             GlobalConfiguration.Setup().UseSqlServer();
 
-            if (login.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
-
                 Application.Run(new frmPrincipalAdministrador());
-            }
 
-            if (login.DialogResult == DialogResult.Yes)
+            }
+            else if (result == DialogResult.Yes)
             {
                 Application.Run(new frmPrincipalCajero());
             }

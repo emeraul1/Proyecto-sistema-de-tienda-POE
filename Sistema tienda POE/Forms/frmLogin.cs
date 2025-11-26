@@ -56,9 +56,17 @@ namespace Sistema_tienda_POE
                         MessageBox.Show($"Bienvenido {usuario.Nombres} {usuario.Apellidos} Rol: Administrador.", "Acceso permitido.",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        this.DialogResult = DialogResult.OK;                   
+                        this.DialogResult = DialogResult.OK;
                     }
                     if (usuario.IdRol == 3)
+                    {
+                        //usuario encontrado
+                        MessageBox.Show($"Bienvenido {usuario.Nombres} {usuario.Apellidos} Rol: Cajero.", "Acceso permitido.",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.DialogResult = DialogResult.Yes;
+                    }
+                    if (usuario.IdRol == 2)
                     {
                         //usuario encontrado
                         MessageBox.Show($"Bienvenido {usuario.Nombres} {usuario.Apellidos} Rol: Cajero.", "Acceso permitido.",

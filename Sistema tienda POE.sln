@@ -5,8 +5,6 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema tienda POE", "Sistema tienda POE\Sistema tienda POE.csproj", "{4FD3E66D-A374-496E-9DEB-8CFA4D0FB1C2}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DB_Inventario", "DB_Inventario\DB_Inventario.sqlproj", "{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +15,6 @@ Global
 		{4FD3E66D-A374-496E-9DEB-8CFA4D0FB1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FD3E66D-A374-496E-9DEB-8CFA4D0FB1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FD3E66D-A374-496E-9DEB-8CFA4D0FB1C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0C42094-5887-4A17-BAC2-AE174F0FA6F3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
