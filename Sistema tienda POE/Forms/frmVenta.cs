@@ -451,5 +451,73 @@ namespace Sistema_tienda_POE.Forms
 
             this.Close();
         }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Validar que solo sea número
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloquea cualquier otra tecla
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtDineroCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos y un punto decimal
+            TextBox txt = sender as TextBox;
+            if (char.IsControl(e.KeyChar))
+                return;
+            if (char.IsDigit(e.KeyChar))
+                return;
+
+            // Permitir un solo punto decimal
+            if (e.KeyChar == '.' && !txt.Text.Contains("."))
+                return;
+
+            // Bloquear todo lo demás
+            e.Handled = true;
+            MessageBox.Show("Solo se permiten números y un punto decimal", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void txtDUI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Validar que solo sea número
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloquea cualquier otra tecla
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void txtDUI_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            // Pausar evento para evitar bucles
+            txt.TextChanged -= txtDUI_TextChanged;
+
+            // Solo números
+            string limpio = new string(txt.Text.Where(char.IsDigit).ToArray());
+
+            // Máximo 9 dígitos
+            if (limpio.Length > 9)
+                limpio = limpio.Substring(0, 9);
+
+            // Insertar guion después de los primeros 8 dígitos
+            if (limpio.Length >= 9)
+                txt.Text = limpio.Insert(8, "-");
+            else if (limpio.Length > 8)
+                txt.Text = limpio.Insert(8, "-");
+            else
+                txt.Text = limpio;
+
+            // Mantener cursor al final
+            txt.SelectionStart = txt.Text.Length;
+
+            // Reactivar evento
+            txt.TextChanged += txtDUI_TextChanged;
+        }
     }
 }

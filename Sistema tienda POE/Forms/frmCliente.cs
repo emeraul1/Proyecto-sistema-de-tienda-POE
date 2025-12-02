@@ -88,6 +88,11 @@ namespace Sistema_tienda_POE.Forms
                 uow.Commit();
             }
 
+            MessageBox.Show("Cliente agregado correctamente.");
+            LimpiarControles();
+            cargarCliente();
+            
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -172,6 +177,47 @@ namespace Sistema_tienda_POE.Forms
                 txtDireccion.Text = cliente.Direccion;
 
             }
+        }
+
+        private void txtDUI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+                e.Handled = true;
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Validar que solo sea número
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Bloquea cualquier otra tecla
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtDUI_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+
+            txt.TextChanged -= txtDUI_TextChanged;
+
+            // Solo números
+            string limpio = new string(txt.Text.Where(char.IsDigit).ToArray());
+
+            // Máximo 9 dígitos
+            if (limpio.Length > 9)
+                limpio = limpio.Substring(0, 9);
+
+            // Insertar guion después de los primeros 8 dígitos
+            if (limpio.Length >= 9)
+                txt.Text = limpio.Insert(8, "-");
+            else if (limpio.Length > 8)
+                txt.Text = limpio.Insert(8, "-");
+            else
+                txt.Text = limpio;
+
+            txt.SelectionStart = txt.Text.Length;
+            txt.TextChanged += txtDUI_TextChanged;
         }
     }
 }

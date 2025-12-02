@@ -105,6 +105,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 22);
             this.txtTelefono.TabIndex = 33;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label4
             // 
@@ -123,6 +124,8 @@
             this.txtDUI.Name = "txtDUI";
             this.txtDUI.Size = new System.Drawing.Size(209, 22);
             this.txtDUI.TabIndex = 32;
+            this.txtDUI.TextChanged += new System.EventHandler(this.txtDUI_TextChanged);
+            this.txtDUI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDUI_KeyPress);
             // 
             // label5
             // 
@@ -189,7 +192,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNombres);
             this.Name = "frmClienteCmd";
-            this.Text = "frmClienteCmd";
+            this.Text = "Actualizar Cliente";
             this.Load += new System.EventHandler(this.frmClienteCmd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
