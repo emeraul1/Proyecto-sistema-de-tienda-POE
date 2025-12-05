@@ -133,5 +133,10 @@ namespace Sistema_tienda_POE.Forms
             // Reactivar evento
             txt.TextChanged += txtDUI_TextChanged;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

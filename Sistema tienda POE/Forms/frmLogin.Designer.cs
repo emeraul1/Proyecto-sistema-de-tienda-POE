@@ -50,9 +50,9 @@
             this.label1.Location = new System.Drawing.Point(22, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(528, 58);
+            this.label1.Size = new System.Drawing.Size(521, 58);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sistema de Ventas e inventario.";
+            this.label1.Text = "Sistema de Ventas e inventario";
             // 
             // label2
             // 

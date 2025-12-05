@@ -54,10 +54,10 @@
             this.btnCerarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerarSesion.ForeColor = System.Drawing.Color.OrangeRed;
-            this.btnCerarSesion.Location = new System.Drawing.Point(32, 610);
-            this.btnCerarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerarSesion.Location = new System.Drawing.Point(24, 496);
+            this.btnCerarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerarSesion.Name = "btnCerarSesion";
-            this.btnCerarSesion.Size = new System.Drawing.Size(223, 42);
+            this.btnCerarSesion.Size = new System.Drawing.Size(167, 34);
             this.btnCerarSesion.TabIndex = 0;
             this.btnCerarSesion.Text = "Cerrar sesion";
             this.btnCerarSesion.UseVisualStyleBackColor = false;
@@ -69,10 +69,10 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Green;
-            this.btnUsuarios.Location = new System.Drawing.Point(624, 107);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsuarios.Location = new System.Drawing.Point(468, 87);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(212, 48);
+            this.btnUsuarios.Size = new System.Drawing.Size(159, 39);
             this.btnUsuarios.TabIndex = 1;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1296, 693);
+            this.panel1.Size = new System.Drawing.Size(972, 563);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -96,10 +96,9 @@
             // 
             this.lbInformacion.AutoSize = true;
             this.lbInformacion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInformacion.Location = new System.Drawing.Point(643, 49);
-            this.lbInformacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbInformacion.Location = new System.Drawing.Point(482, 40);
             this.lbInformacion.Name = "lbInformacion";
-            this.lbInformacion.Size = new System.Drawing.Size(252, 53);
+            this.lbInformacion.Size = new System.Drawing.Size(201, 42);
             this.lbInformacion.TabIndex = 10;
             this.lbInformacion.Text = "ADMINISTRADOR";
             // 
@@ -112,10 +111,9 @@
             this.panel2.Controls.Add(this.btnUsuarios);
             this.panel2.Controls.Add(this.btnVender);
             this.panel2.Controls.Add(this.tbnProductos);
-            this.panel2.Location = new System.Drawing.Point(319, 144);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(239, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 476);
+            this.panel2.Size = new System.Drawing.Size(703, 387);
             this.panel2.TabIndex = 9;
             // 
             // bntClientes
@@ -123,10 +121,9 @@
             this.bntClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntClientes.ForeColor = System.Drawing.Color.Green;
-            this.bntClientes.Location = new System.Drawing.Point(155, 386);
-            this.bntClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bntClientes.Location = new System.Drawing.Point(116, 243);
             this.bntClientes.Name = "bntClientes";
-            this.bntClientes.Size = new System.Drawing.Size(212, 52);
+            this.bntClientes.Size = new System.Drawing.Size(159, 42);
             this.bntClientes.TabIndex = 10;
             this.bntClientes.Text = "Cliente";
             this.bntClientes.UseVisualStyleBackColor = true;
@@ -138,10 +135,10 @@
             this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporteVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteVentas.ForeColor = System.Drawing.Color.Green;
-            this.btnReporteVentas.Location = new System.Drawing.Point(155, 295);
-            this.btnReporteVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReporteVentas.Location = new System.Drawing.Point(285, 323);
+            this.btnReporteVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReporteVentas.Name = "btnReporteVentas";
-            this.btnReporteVentas.Size = new System.Drawing.Size(212, 55);
+            this.btnReporteVentas.Size = new System.Drawing.Size(159, 45);
             this.btnReporteVentas.TabIndex = 9;
             this.btnReporteVentas.Text = "Reporte de Ventas";
             this.btnReporteVentas.UseVisualStyleBackColor = true;
@@ -153,10 +150,10 @@
             this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProveedores.ForeColor = System.Drawing.Color.Green;
-            this.btnProveedores.Location = new System.Drawing.Point(624, 295);
-            this.btnProveedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProveedores.Location = new System.Drawing.Point(468, 240);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(212, 55);
+            this.btnProveedores.Size = new System.Drawing.Size(159, 45);
             this.btnProveedores.TabIndex = 8;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.UseVisualStyleBackColor = true;
@@ -168,10 +165,10 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.Green;
-            this.btnCompras.Location = new System.Drawing.Point(624, 202);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCompras.Location = new System.Drawing.Point(468, 164);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(212, 48);
+            this.btnCompras.Size = new System.Drawing.Size(159, 39);
             this.btnCompras.TabIndex = 7;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
@@ -183,10 +180,10 @@
             this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.ForeColor = System.Drawing.Color.Green;
-            this.btnVender.Location = new System.Drawing.Point(155, 202);
-            this.btnVender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVender.Location = new System.Drawing.Point(116, 164);
+            this.btnVender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(212, 48);
+            this.btnVender.Size = new System.Drawing.Size(159, 39);
             this.btnVender.TabIndex = 6;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
@@ -198,10 +195,10 @@
             this.tbnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tbnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbnProductos.ForeColor = System.Drawing.Color.Green;
-            this.tbnProductos.Location = new System.Drawing.Point(155, 107);
-            this.tbnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbnProductos.Location = new System.Drawing.Point(116, 87);
+            this.tbnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbnProductos.Name = "tbnProductos";
-            this.tbnProductos.Size = new System.Drawing.Size(212, 48);
+            this.tbnProductos.Size = new System.Drawing.Size(159, 39);
             this.tbnProductos.TabIndex = 5;
             this.tbnProductos.Text = "Productos";
             this.tbnProductos.UseVisualStyleBackColor = true;
@@ -214,32 +211,30 @@
             this.panel4.Controls.Add(this.btnCerarSesion);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(311, 693);
+            this.panel4.Size = new System.Drawing.Size(233, 563);
             this.panel4.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_tienda_POE.Properties.Resources.usuario2;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 144);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 117);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 214);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // frmPrincipalAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1296, 693);
+            this.ClientSize = new System.Drawing.Size(972, 563);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipalAdministrador";

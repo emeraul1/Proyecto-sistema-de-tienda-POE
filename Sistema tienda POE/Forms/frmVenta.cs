@@ -384,7 +384,7 @@ namespace Sistema_tienda_POE.Forms
                 string mensajeExito = " ¡Venta completada con éxito!" +
                                       $"\n\nTotal de la venta: {total:C2}" +
                                       $"\nDinero recibido:   {dineroEntregado:C2}" +
-                                      $"\nVUELTO a entregar: {vuelto:C2}";
+                                      $"\nCambio a entregar: {vuelto:C2}";
 
                 MessageBox.Show(mensajeExito, "Transacción Exitosa",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

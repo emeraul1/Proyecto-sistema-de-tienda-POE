@@ -30,6 +30,7 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lbTextoTotal = new System.Windows.Forms.Label();
             this.btnQuitar = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.lbTituloRegistro = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -96,6 +96,20 @@
             this.panel1.Size = new System.Drawing.Size(382, 382);
             this.panel1.TabIndex = 14;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(232, 318);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 33);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnRegistrar
             // 
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -112,11 +126,11 @@
             // lbTextoTotal
             // 
             this.lbTextoTotal.AutoSize = true;
-            this.lbTextoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTextoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lbTextoTotal.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbTextoTotal.Location = new System.Drawing.Point(161, 213);
+            this.lbTextoTotal.Location = new System.Drawing.Point(156, 213);
             this.lbTextoTotal.Name = "lbTextoTotal";
-            this.lbTextoTotal.Size = new System.Drawing.Size(76, 13);
+            this.lbTextoTotal.Size = new System.Drawing.Size(96, 17);
             this.lbTextoTotal.TabIndex = 11;
             this.lbTextoTotal.Text = "Total: $0.00";
             // 
@@ -130,7 +144,6 @@
             this.btnQuitar.Size = new System.Drawing.Size(107, 37);
             this.btnQuitar.TabIndex = 10;
             this.btnQuitar.Text = "Quitar Producto";
-            this.btnQuitar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
@@ -206,11 +219,12 @@
             // 
             // btnBuscarProveedor
             // 
-            this.btnBuscarProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F);
+            this.btnBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F);
             this.btnBuscarProveedor.ForeColor = System.Drawing.Color.Green;
-            this.btnBuscarProveedor.Location = new System.Drawing.Point(306, 33);
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(312, 29);
             this.btnBuscarProveedor.Name = "btnBuscarProveedor";
-            this.btnBuscarProveedor.Size = new System.Drawing.Size(58, 23);
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(58, 32);
             this.btnBuscarProveedor.TabIndex = 3;
             this.btnBuscarProveedor.Text = "Buscar";
             this.btnBuscarProveedor.UseVisualStyleBackColor = true;
@@ -262,20 +276,6 @@
             this.dgvDetalle.RowHeadersWidth = 51;
             this.dgvDetalle.Size = new System.Drawing.Size(347, 427);
             this.dgvDetalle.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(232, 318);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 33);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmCompra
             // 

@@ -168,7 +168,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 25);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Codigo:";
+            this.label4.Text = "Código:";
             // 
             // txtContraseña
             // 
