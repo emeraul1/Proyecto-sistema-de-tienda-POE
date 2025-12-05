@@ -19,6 +19,8 @@ namespace Sistema_tienda_POE
         public frmLogin()
         {
             InitializeComponent();
+   
+            this.AcceptButton = btnIngresar;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace Sistema_tienda_POE.Forms
         {
             InitializeComponent();
             this.IdProveedorSeleccionado = 0; // Inicializamos a 0
+
         }
 
         private void frmBuscarProveedor_Load(object sender, EventArgs e)

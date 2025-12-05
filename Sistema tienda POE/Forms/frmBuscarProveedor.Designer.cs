@@ -51,9 +51,8 @@ namespace Sistema_tienda_POE.Forms
             this.txtFiltro.TabIndex = 1;
             // 
             // btnBuscar
-            // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnBuscar.Location = new System.Drawing.Point(335, 28);
             this.btnBuscar.Name = "btnBuscar";
@@ -62,6 +61,7 @@ namespace Sistema_tienda_POE.Forms
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+
             // 
             // dgvProveedores
             // 
@@ -76,7 +76,6 @@ namespace Sistema_tienda_POE.Forms
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(380, 250);
             this.dgvProveedores.TabIndex = 3;
-            this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             this.dgvProveedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellDoubleClick);
             // 
             // btnSeleccionar
@@ -172,6 +171,5 @@ namespace Sistema_tienda_POE.Forms
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private DataGridViewCellEventHandler dgvProveedores_CellContentClick;
     }
 }
