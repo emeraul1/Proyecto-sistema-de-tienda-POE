@@ -15,6 +15,7 @@ namespace Sistema_tienda_POE.Forms
     public partial class frmCategoriaProducto : Form
     {
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["conexionbd"].ConnectionString;
+
         public frmCategoriaProducto()
         {
             InitializeComponent();
@@ -22,12 +23,14 @@ namespace Sistema_tienda_POE.Forms
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            // Validación
             if (string.IsNullOrEmpty(txtNombreCategoria.Text))
             {
                 MessageBox.Show("Por favor, completa todos los campos.");
                 return;
             }
 
+            // Crear objeto categoría
             var nuevaCategoria = new Clases.Categoria
             {
                 Nombre = txtNombreCategoria.Text.Trim(),
@@ -42,9 +45,10 @@ namespace Sistema_tienda_POE.Forms
             }
 
             MessageBox.Show("Categoría agregada exitosamente.");
-            txtNombreCategoria.Clear();
-            txtDescripcion.Clear();
 
+            this.DialogResult = DialogResult.OK;
+
+            this.Close();
         }
 
         private void tbnCancelar_Click(object sender, EventArgs e)
@@ -54,7 +58,6 @@ namespace Sistema_tienda_POE.Forms
 
         private void frmCategoriaProducto_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

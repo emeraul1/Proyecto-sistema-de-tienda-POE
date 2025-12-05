@@ -100,7 +100,7 @@
             this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(186)))), ((int)(((byte)(155)))));
+            this.btnIngresar.ForeColor = System.Drawing.Color.Green;
             this.btnIngresar.Location = new System.Drawing.Point(368, 261);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";

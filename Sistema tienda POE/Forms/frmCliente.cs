@@ -34,7 +34,7 @@ namespace Sistema_tienda_POE.Forms
         {
             using (var uow = new UnitOfwork(_connectionString))
             {
-                var clientes = uow.Cliente.GetAll();
+                var clientes = uow.Cliente.GetByEstado(true).ToList();
                 dgvCliente.DataSource = clientes;
                 dgvCliente.Columns["IdCliente"].Visible = false;
                 dgvCliente.Columns["Estado"].Visible = false;
